@@ -1,0 +1,347 @@
+﻿@{
+    Layout = null;
+}
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Pastries Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap-responsive.min.css" />
+
+    <link rel="stylesheet" href="~/Content/bootstrappage.css" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" href="~/Content/flexslider.css" />
+    <link rel="stylesheet" href="~/Content/main.css" />
+
+    <!-- scripts -->
+    <script src="~/Scripts/jquery-1.7.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/superfish.js"></script>
+    <script src="~/Scripts/jquery.scrolltotop.js"></script>
+</head>
+<body>
+    <div id="top-bar" class="container">
+        <div class="row">
+            <div class="span4">
+                <!-- <form method="POST" class="search_form">-->
+                <label>Categories</label>
+                <input type="search" list="Categories" class="input-block-level search-query" Placeholder="What do you want?" style="color:black;" onchange="openPage()" value="" id="searchcategory" />
+                <datalist id="Categories">
+                    <option>Cakes</option>
+                    <option>Cookies</option>
+                    <option>Bread</option>
+                    <option>Pizza</option>
+                    <option>Donut</option>
+                </datalist>
+                <!-- <input type="text" class="input-block-level search-query" Placeholder="eg. T-sirt">-->
+                <!--</form>-->
+            </div>
+            <!--script for search--->
+            <script>
+                function openPage() {
+                    var x = document.getElementById("searchcategory").value;
+
+                    if (x === Cakes) {
+                        window.open("/Home/TutorialDetails.cshtml");
+                    }
+                    if (x === Cookies) {
+                        windows.open(@Html.ActionLink("Cookies", "TutorialDetails", "Home"));
+                    }
+                }
+            </script>
+
+            <!---------------------->
+            <div class="span8">
+                <div class="account pull-right">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper" class="container">
+        <section class="navbar main-menu">
+            <div class="navbar-inner main-menu">
+                <a class="logo pull-left"><img src="~/themes/images/logo.png" class="site_logo" alt=""></a>
+                <nav id="menu" class="pull-right">
+                    <ul>
+                        <li>@Html.ActionLink("HomePage", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Cakes", "CakesSection", "Home")</li>
+                        <li>@Html.ActionLink("Cookies", "CookiesSection", "Home")</li>
+                        <li>@Html.ActionLink("Cupcakes", "CupcakesSection", "Home")</li>
+                        <li>@Html.ActionLink("Breads", "BreadsSection", "Home")</li>
+                        <li>@Html.ActionLink("Pinoy Delicacies", "PinoyDelicaciesSection", "Home")</li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <section class="header_text sub">
+            <img class="pageBanner" src="~/themes/images/pageBanner.png" alt="New products">
+            <h4><span>Tutorial Detail</span></h4>
+        </section>
+        <section class="main-content">
+            <div class="row">
+                <div class="span9">
+                    <div class="row">
+                        <div class="span4">
+                            <a class="thumbnail" data-fancybox-group="group1" title="Description 1"><iframe width="365" height="315" src="https://www.youtube.com/embed/9dCcTK7oJLA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                            <ul class="thumbnails small">
+                                <li class="span1">
+                                    <a class="thumbnail" data-fancybox-group="group1" title="Description 2"><img src="~/Images/bread02.png" alt=""></a>
+                                </li>
+                                <li class="span1">
+                                    <a class="thumbnail" data-fancybox-group="group1" title="Description 3"><img src="~/Images/bread02.png" alt=""></a>
+                                </li>
+                                <li class="span1">
+                                    <a class="thumbnail" data-fancybox-group="group1" title="Description 4"><img src="~/Images/bread02.png" alt=""></a>
+                                </li>
+                                <li class="span1">
+                                    <a class="thumbnail" data-fancybox-group="group1" title="Description 5"><img src="~/Images/bread02.png" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="span5">
+                            <address>
+                                <strong>Bread:</strong> <span>Ciabatta Bread</span><br><br />
+                                <span>“Ciabatta” is the Italian word for “slipper.” <br />This Italian-invented bread is made <br />from a few basic ingredients, which <br />include water, salt, yeast, and wheat flour. </span>
+                            </address>
+                        </div>
+                        <div class="span5">
+                            <form class="form-inline">
+                                <button class="btn btn-inverse" type="submit">@Html.ActionLink("Back", "BreadsSection", "Home")</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span9">
+                            <ul class="nav nav-tabs" id="myTab">
+                                <li class="active"><a>Description</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="profile">
+                                    <ul>
+                                        <p>Ingridients</p>
+                                        <li>Flour 350g </li>
+                                        <li>Water:280g </li>
+                                        <li>Salt:1 tsp </li>
+                                        <li>Yeast:1 tsp </li>
+                                    </ul>
+                                    <ul>
+                                        <p>Procedure</p>
+                                        <li>Step 1: Prepare the dough  </li>
+                                        <li>Step 2: Proof the dough (2 hours)  </li>
+                                        <li>Step 3: Shape and Divide the dough </li>
+                                        <li>Step 4: Final Proofing(45 minutes)  </li>
+                                        <li>Step 5.Bake the Bread. Bake at 450 F for 10 minutes and then reduce the temperature to 400 F for 12-15 minutes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span9">
+                            <br>
+                            <h4 class="title">
+                                <span class="pull-left"><span class="text"><strong>Related</strong> Products</span></span>
+                            </h4>
+                            <div id="myCarousel-1" class="carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="active item">
+                                        <ul class="thumbnails listing-products">
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <span class="sale_tag"></span>
+                                                    <a><img alt="" src="~/Images/bread06.png"></a><br />
+                                                    <a class="title">Wuam ultrices rutrum</a><br />
+                                                    <a class="category">Suspendisse aliquet</a>
+                                                    <p>@Html.ActionLink("Check Now!", "BreadsSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <span class="sale_tag"></span>
+                                                    <a><img alt="" src="~/Images/bread05.png"></a><br />
+                                                    <a class="title">Fusce id molestie massa</a><br />
+                                                    <a class="category">Phasellus consequat</a>
+                                                    <p>@Html.ActionLink("Check Now!", "BreadsSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <a><img alt="" src="~/Images/bread04.png"></a><br />
+                                                    <a class="title">Praesent tempor sem</a><br />
+                                                    <a class="category">Erat gravida</a>
+                                                    <p>@Html.ActionLink("Check Now!", "BreadsSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="item">
+                                        <ul class="thumbnails listing-products">
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <span class="sale_tag"></span>
+                                                    <a><img alt="" src="~/Images/bread01.png"></a><br />
+                                                    <a class="title">Fusce id molestie massa</a><br />
+                                                    <a class="category">Phasellus consequat</a>
+                                                    <p>@Html.ActionLink("Check Now!", "BreadsSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <a><img alt="" src="~/Images/bread03.png"></a><br />
+                                                    <a>Praesent tempor sem</a><br />
+                                                    <a class="category">Erat gravida</a>
+                                                    <p>@Html.ActionLink("Check Now!", "BreadsSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <span class="sale_tag"></span>
+                                                    <a><img alt="" src="~/Images/bread04.png"></a><br />
+                                                    <a class="title">Wuam ultrices rutrum</a><br />
+                                                    <a class="category">Suspendisse aliquet</a>
+                                                    <p>@Html.ActionLink("Check Now!", "BreadsSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 col">
+                    <div class="block">
+                        <ul class="nav nav-list">
+                            <li>@Html.ActionLink("Cakes", "CakesSection", "Home")</li>
+                            <li>@Html.ActionLink("Cookies", "CookiesSection", "Home")</li>
+                            <li>@Html.ActionLink("Cupcakes", "CupcakesSection", "Home")</li>
+                            <li class="active">@Html.ActionLink("Breads", "BreadsSection", "Home")</li>
+                            <li>@Html.ActionLink("Pinoy Delicacies", "PinoyDelicaciesSection", "Home")</li>
+                        </ul>
+                        <br />
+                        <ul class="nav nav-list below">
+                            <li class="nav-header">MANUFACTURES</li>
+                            <li>Adidas</li>
+                            <li>Nike</li>
+                            <li>Dunlop</li>
+                            <li>Yamaha</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="title">
+                            <span class="pull-left"><span class="text">Randomize</span></span>
+                        </h4>
+                        <div id="myCarousel" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="active item">
+                                    <ul class="thumbnails listing-products">
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <span class="sale_tag"></span>
+                                                <a><img alt="" src="~/Images/bread03.png"></a><br />
+                                                <a class="title">Fusce id molestie massa</a><br />
+                                                <a class="category">Suspendisse aliquet</a>
+                                                <p>@Html.ActionLink("Check Now!", "BreadsSection", "Home")</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item">
+                                    <ul class="thumbnails listing-products">
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <a><img alt="" src="~/Images/bread03.png"></a><br />
+                                                <a class="title">Tempor sem sodales</a><br />
+                                                <a>Urna nec lectus mollis</a>
+                                                <p>@Html.ActionLink("Check Now!", "BreadsSection", "Home")</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <h4 class="title"><strong>Best</strong> Seller</h4>
+                        <ul class="small-product">
+                            <li>
+                                <a title="Praesent tempor sem sodales">
+                                    <img src="~/Images/bread05.png" alt="Praesent tempor sem sodales">
+                                </a>
+                                <a>Praesent tempor sem</a>
+                            </li>
+                            <li>
+                                <a title="Luctus quam ultrices rutrum">
+                                    <img src="~/Images/bread03.png" alt="Luctus quam ultrices rutrum">
+                                </a>
+                                <a>Luctus quam ultrices rutrum</a>
+                            </li>
+                            <li>
+                                <a title="Fusce id molestie massa">
+                                    <img src="~/Images/bread04.png" alt="Fusce id molestie massa">
+                                </a>
+                                <a>Fusce id molestie massa</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="footer-bar">
+            <div class="row">
+                <div class="span3">
+                    <h4>Navigation</h4>
+                    <ul class="nav">
+                        <li>@Html.ActionLink("HomePage", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Cakes", "CakesSection", "Home")</li>
+                        <li>@Html.ActionLink("Cookies", "CookiesSection", "Home")</li>
+                        <li>@Html.ActionLink("Cupcakes", "CupcakesSection", "Home")</li>
+                        <li class="active">@Html.ActionLink("Breads", "BreadsSection", "Home")</li>
+                        <li>@Html.ActionLink("Pinoy Delicacies", "PinoyDelicaciesSection", "Home")</li>
+                    </ul>
+                </div>
+                <div class="span4">
+                </div>
+                <div class="span5">
+                    <p class="logo"><img src="~/themes/images/logo.png" class="site_logo" alt=""></p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. the  Lorem Ipsum has been the industry's standard dummy text ever since the you.</p>
+                    <br />
+                    <span class="social_icons">
+                        <a class="facebook" href="#">Facebook</a>
+                        <a class="twitter" href="#">Twitter</a>
+                        <a class="skype" href="#">Skype</a>
+                        <a class="vimeo" href="#">Vimeo</a>
+                    </span>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="themes/js/common.js"></script>
+    <script>
+			$(function () {
+				$('#myTab a:first').tab('show');
+				$('#myTab a').click(function (e) {
+					e.preventDefault();
+					$(this).tab('show');
+				})
+			})
+			$(document).ready(function() {
+				$('.thumbnail').fancybox({
+					openEffect  : 'none',
+					closeEffect : 'none'
+				});
+
+				$('#myCarousel-2').carousel({
+                    interval: 2500
+                });
+			});
+    </script>
+</body>
+</html>

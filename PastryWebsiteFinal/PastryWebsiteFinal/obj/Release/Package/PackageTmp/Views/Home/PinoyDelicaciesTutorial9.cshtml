@@ -1,0 +1,360 @@
+﻿@{
+    Layout = null;
+}
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Pastries Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap-responsive.min.css" />
+
+    <link rel="stylesheet" href="~/Content/bootstrappage.css" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" href="~/Content/flexslider.css" />
+    <link rel="stylesheet" href="~/Content/main.css" />
+
+    <!-- scripts -->
+    <script src="~/Scripts/jquery-1.7.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/superfish.js"></script>
+    <script src="~/Scripts/jquery.scrolltotop.js"></script>
+</head>
+<body>
+    <div id="top-bar" class="container">
+        <div class="row">
+            <div class="span4">
+                <!-- <form method="POST" class="search_form">-->
+                <label>Categories</label>
+                <input type="search" list="Categories" class="input-block-level search-query" Placeholder="What do you want?" style="color:black;" onchange="openPage()" value="" id="searchcategory" />
+                <datalist id="Categories">
+                    <option>Cakes</option>
+                    <option>Cookies</option>
+                    <option>Bread</option>
+                    <option>Pizza</option>
+                    <option>Donut</option>
+                </datalist>
+                <!-- <input type="text" class="input-block-level search-query" Placeholder="eg. T-sirt">-->
+                <!--</form>-->
+            </div>
+            <!--script for search--->
+            <script>
+                function openPage() {
+                    var x = document.getElementById("searchcategory").value;
+
+                    if (x === Cakes) {
+                        window.open("/Home/TutorialDetails.cshtml");
+                    }
+                    if (x === Cookies) {
+                        windows.open(@Html.ActionLink("Cookies", "TutorialDetails", "Home"));
+                    }
+                }
+            </script>
+
+            <!---------------------->
+            <div class="span8">
+                <div class="account pull-right">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper" class="container">
+        <section class="navbar main-menu">
+            <div class="navbar-inner main-menu">
+                <a class="logo pull-left"><img src="~/themes/images/logo.png" class="site_logo" alt=""></a>
+                <nav id="menu" class="pull-right">
+                    <ul>
+                        <li>@Html.ActionLink("HomePage", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Cakes", "CakesSection", "Home")</li>
+                        <li>@Html.ActionLink("Cookies", "CookiesSection", "Home")</li>
+                        <li>@Html.ActionLink("Cupcakes", "CupcakesSection", "Home")</li>
+                        <li>@Html.ActionLink("Breads", "BreadsSection", "Home")</li>
+                        <li>@Html.ActionLink("Pinoy Delicacies", "PinoyDelicaciesSection", "Home")</li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <section class="header_text sub">
+            <img class="pageBanner" src="~/themes/images/pageBanner.png" alt="New products">
+            <h4><span>Tutorial Detail</span></h4>
+        </section>
+        <section class="main-content">
+            <div class="row">
+                <div class="span9">
+                    <div class="row">
+                        <div class="span4">
+                            <a class="thumbnail" data-fancybox-group="group1" title="Description 1"><iframe width="365" height="315" src="https://www.youtube.com/embed/ebQMLF89MFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                            <ul class="thumbnails small">
+                                <li class="span1">
+                                    <a class="thumbnail" data-fancybox-group="group1" title="Description 2"><img src="~/Images/pinoy09.png" alt=""></a>
+                                </li>
+                                <li class="span1">
+                                    <a class="thumbnail" data-fancybox-group="group1" title="Description 3"><img src="~/Images/pinoy09.png" alt=""></a>
+                                </li>
+                                <li class="span1">
+                                    <a class="thumbnail" data-fancybox-group="group1" title="Description 4"><img src="~/Images/pinoy09.png" alt=""></a>
+                                </li>
+                                <li class="span1">
+                                    <a class="thumbnail" data-fancybox-group="group1" title="Description 5"><img src="~/Images/pinoy09.png" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="span5">
+                            <address>
+                                <strong>PinoyDelicacies:</strong> <span>Ginataang Bilo Bilo</span><br><br />
+                                <span>Ginataang bilo-bilo means “rice balls cooked in sweetened coconut milk.” It is derived from the word gata (coconut milk). Bilo-bilo comes from the sound the sticky rice balls make as they boil away on a stove. The Chinese introduced the idea that round and starchy desserts symbolize wealth sticking to anyone who consumes them.</span>
+                            </address>
+                        </div>
+                        <div class="span5">
+                            <form class="form-inline">
+                                <button class="btn btn-inverse" type="submit">@Html.ActionLink("Back", "PinoyDelicaciesSection", "Home")</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span9">
+                            <ul class="nav nav-tabs" id="myTab">
+                                <li class="active"><a>Description</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="profile">
+                                    <ul>
+                                        <p>Ingridients</p>
+                                        <li>1/2 cup uncooked mini sago pearls</li>
+                                        <li>water</li>
+                                        <li>20 to 25 pieces glutinous rice balls</li>
+                                        <li>5 cups coconut milk</li>
+                                        <li>1 cup sugar</li>
+                                        <li>1 cup coconut cream</li>
+                                        <li>1 cup ripe jackfruit shredded</li>
+                                    </ul>
+                                    <ul>
+                                        <p>For the Glutinous Rice Balls</p>
+                                        <li>1 cup glutinous rice flour</li>
+                                        <li>1/2 water</li>
+                                    </ul>
+                                    <ul>
+                                        <p>INSTRUCTIONS</p>
+                                        <li>In a pot over medium heat, bring about 6 cups water to a boil. Add sago pearls and cook, stirring occasionally, for about 15 to 20 minutes or until soft and translucent. Rinse and drain well.</li>
+                                        <li>In a deep pot over medium heat, combine coconut milk and sugar. Bring to a boil, stirring occasionally, until sugar is dissolved.</li>
+                                        <li>Add glutinous rice balls and cook for about 8 to 10 minutes or until they begin to float to top. Add coconut cream and stir to combine. Add sago and jackfruit and continue to cook for about 3 to 5 minutes or until heated through. Serve warm.</li>
+                                        <li>For the Glutinous Rice Balls</li>
+                                        <li>In a small bowl, combine glutinous rice flour and water into a stiff but pliable dough. If the dough is too sticky, add more flour and if too crumbly, add a little bit more water. Using the palms of hands, form about 1 teaspoon of dough into smooth balls. Cover prepared balls with cloth until ready to use.</li>
+                                        <li>Add evaporated milk, gently stirring in a circular motion until blended.</li>
+                                        <li>Using a cheesecloth or fine-mesh sieve, strain egg-milk mixture to remove stray egg whites.</li>
+                                        <li>Pour mixture into prepared llaneras and cover tighly with foil Arrange in a a wide, oven-safe dish with about 1-inch of water (bain marie or water bath)..</li>
+                                        <li>Bake in a 375 F oven for about 50 minutes to 1 hour or until a toothpick inserted in the middle of custard comes out clean.</li>
+                                        <li>Remove from oven, allow to cool, and refrigerate to chill and completely set. To serve, turn flan over on a serving plate, ending with caramel on top.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span9">
+                            <br>
+                            <h4 class="title">
+                                <span class="pull-left"><span class="text"><strong>Related</strong> Products</span></span>
+                            </h4>
+                            <div id="myCarousel-1" class="carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="active item">
+                                        <ul class="thumbnails listing-products">
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <span class="sale_tag"></span>
+                                                    <a><img alt="" src="~/Images/pinoy02.png"></a><br />
+                                                    <a class="title">Wuam ultrices rutrum</a><br />
+                                                    <a class="category">Suspendisse aliquet</a>
+                                                    <p>@Html.ActionLink("Check Now!", "PinoyDelicaciesSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <span class="sale_tag"></span>
+                                                    <a><img alt="" src="~/Images/pinoy02.png"></a><br />
+                                                    <a class="title">Fusce id molestie massa</a><br />
+                                                    <a class="category">Phasellus consequat</a>
+                                                    <p>@Html.ActionLink("Check Now!", "PinoyDelicaciesSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <a><img alt="" src="~/Images/pinoy02.png"></a><br />
+                                                    <a class="title">Praesent tempor sem</a><br />
+                                                    <a class="category">Erat gravida</a>
+                                                    <p>@Html.ActionLink("Check Now!", "PinoyDelicaciesSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="item">
+                                        <ul class="thumbnails listing-products">
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <span class="sale_tag"></span>
+                                                    <a><img alt="" src="~/Images/pinoy02.png"></a><br />
+                                                    <a class="title">Fusce id molestie massa</a><br />
+                                                    <a class="category">Phasellus consequat</a>
+                                                    <p>@Html.ActionLink("Check Now!", "PinoyDelicaciesSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <a><img alt="" src="~/Images/pinoy02.png"></a><br />
+                                                    <a>Praesent tempor sem</a><br />
+                                                    <a class="category">Erat gravida</a>
+                                                    <p>@Html.ActionLink("Check Now!", "PinoyDelicaciesSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <span class="sale_tag"></span>
+                                                    <a><img alt="" src="~/Images/pinoy02.png"></a><br />
+                                                    <a class="title">Wuam ultrices rutrum</a><br />
+                                                    <a class="category">Suspendisse aliquet</a>
+                                                    <p>@Html.ActionLink("Check Now!", "PinoyDelicaciesSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 col">
+                    <div class="block">
+                        <ul class="nav nav-list">
+                            <li>@Html.ActionLink("Cakes", "CakesSection", "Home")</li>
+                            <li>@Html.ActionLink("Cookies", "CookiesSection", "Home")</li>
+                            <li>@Html.ActionLink("Cupcakes", "CupcakesSection", "Home")</li>
+                            <li>@Html.ActionLink("Breads", "BreadsSection", "Home")</li>
+                            <li class="active">@Html.ActionLink("Pinoy Delicacies", "PinoyDelicaciesSection", "Home")</li>
+                        </ul>
+                        <br />
+                        <ul class="nav nav-list below">
+                            <li class="nav-header">MANUFACTURES</li>
+                            <li>Adidas</li>
+                            <li>Nike</li>
+                            <li>Dunlop</li>
+                            <li>Yamaha</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="title">
+                            <span class="pull-left"><span class="text">Randomize</span></span>
+                        </h4>
+                        <div id="myCarousel" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="active item">
+                                    <ul class="thumbnails listing-products">
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <span class="sale_tag"></span>
+                                                <a><img alt="" src="~/Images/pinoy02.png"></a><br />
+                                                <a class="title">Fusce id molestie massa</a><br />
+                                                <a class="category">Suspendisse aliquet</a>
+                                                <p>@Html.ActionLink("Check Now!", "PinoyDelicaciesSection", "Home")</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item">
+                                    <ul class="thumbnails listing-products">
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <a><img alt="" src="~/Images/pinoy02.png"></a><br />
+                                                <a class="title">Tempor sem sodales</a><br />
+                                                <a>Urna nec lectus mollis</a>
+                                                <p>@Html.ActionLink("Check Now!", "PinoyDelicaciesSection", "Home")</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <h4 class="title"><strong>Best</strong> Seller</h4>
+                        <ul class="small-product">
+                            <li>
+                                <a title="Praesent tempor sem sodales">
+                                    <img src="~/Images/pinoy02.png" alt="Praesent tempor sem sodales">
+                                </a>
+                                <a>Praesent tempor sem</a>
+                            </li>
+                            <li>
+                                <a title="Luctus quam ultrices rutrum">
+                                    <img src="~/Images/pinoy02.png" alt="Luctus quam ultrices rutrum">
+                                </a>
+                                <a>Luctus quam ultrices rutrum</a>
+                            </li>
+                            <li>
+                                <a title="Fusce id molestie massa">
+                                    <img src="~/Images/pinoy02.png" alt="Fusce id molestie massa">
+                                </a>
+                                <a>Fusce id molestie massa</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="footer-bar">
+            <div class="row">
+                <div class="span3">
+                    <h4>Navigation</h4>
+                    <ul class="nav">
+                        <li>@Html.ActionLink("HomePage", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Cakes", "CakesSection", "Home")</li>
+                        <li>@Html.ActionLink("Cookies", "CookiesSection", "Home")</li>
+                        <li>@Html.ActionLink("Cupcakes", "CupcakesSection", "Home")</li>
+                        <li>@Html.ActionLink("Breads", "BreadsSection", "Home")</li>
+                        <li class="active">@Html.ActionLink("Pinoy Delicacies", "PinoyDelicaciesSection", "Home")</li>
+                    </ul>
+                </div>
+                <div class="span4">
+                </div>
+                <div class="span5">
+                    <p class="logo"><img src="~/themes/images/logo.png" class="site_logo" alt=""></p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. the  Lorem Ipsum has been the industry's standard dummy text ever since the you.</p>
+                    <br />
+                    <span class="social_icons">
+                        <a class="facebook" href="#">Facebook</a>
+                        <a class="twitter" href="#">Twitter</a>
+                        <a class="skype" href="#">Skype</a>
+                        <a class="vimeo" href="#">Vimeo</a>
+                    </span>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="themes/js/common.js"></script>
+    <script>
+			$(function () {
+				$('#myTab a:first').tab('show');
+				$('#myTab a').click(function (e) {
+					e.preventDefault();
+					$(this).tab('show');
+				})
+			})
+			$(document).ready(function() {
+				$('.thumbnail').fancybox({
+					openEffect  : 'none',
+					closeEffect : 'none'
+				});
+
+				$('#myCarousel-2').carousel({
+                    interval: 2500
+                });
+			});
+    </script>
+</body>
+</html>

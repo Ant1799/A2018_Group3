@@ -1,0 +1,278 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Cookies Section</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap-responsive.min.css" />
+
+    <link rel="stylesheet" href="~/Content/bootstrappage.css" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" href="~/Content/flexslider.css" />
+    <link rel="stylesheet" href="~/Content/main.css" />
+
+    <!-- scripts -->
+    <script src="~/Scripts/jquery-1.7.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/superfish.js"></script>
+    <script src="~/Scripts/jquery.scrolltotop.js"></script>
+
+</head>
+<body>
+    <div id="top-bar" class="container">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>@Html.ActionLink("Back", "Index", "Home")</button>
+        <div class="row">
+            <div class="span4">
+                <!-- <form method="POST" class="search_form">-->
+                <label>Categories</label>
+                <input type="search" list="Categories" class="input-block-level search-query" Placeholder="What do you want?" style="color:black;" onchange="openPage()" value="" id="searchcategory" />
+                <datalist id="Categories">
+                    <option>Cakes</option>
+                    <option>Cookies</option>
+                    <option>Bread</option>
+                    <option>Pizza</option>
+                    <option>Donut</option>
+                </datalist>
+                <!-- <input type="text" class="input-block-level search-query" Placeholder="eg. T-sirt">-->
+                <!--</form>-->
+            </div>
+            <!--script for search--->
+            <script>
+                function openPage() {
+                    var x = document.getElementById("searchcategory").value;
+
+                    if (x === Cakes) {
+                        window.open("/Home/TutorialDetails.cshtml");
+                    }
+                    if (x === Cookies) {
+                        windows.open(@Html.ActionLink("Cookies", "TutorialDetails", "Home"));
+                    }
+                }
+            </script>
+
+            <!---------------------->
+            <div class="span8">
+                <div class="account pull-right">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper" class="container">
+        <section class="navbar main-menu">
+            <div class="navbar-inner main-menu">
+                <a class="logo pull-left"><img src="~/themes/images/logo.png" class="site_logo" alt=""></a>
+                <nav id="menu" class="pull-right">
+                    <ul>
+                        <li>@Html.ActionLink("HomePage", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Cakes", "CakesSection", "Home")</li>
+                        <li>@Html.ActionLink("Cookies", "CookiesSection", "Home")</li>
+                        <li>@Html.ActionLink("Cupcakes", "CupcakesSection", "Home")</li>
+                        <li>@Html.ActionLink("Breads", "BreadsSection", "Home")</li>
+                        <li>@Html.ActionLink("Pinoy Delicacies", "PinoyDelicaciesSection", "Home")</li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <section class="header_text sub">
+            <img class="pageBanner" src="~/themes/images/pageBanner.png" alt="New products">
+            <h4><span>New products</span></h4>
+        </section>
+        <section class="main-content">
+
+            <div class="row">
+                <div class="span9">
+                    <ul class="thumbnails listing-products">
+                        <li class="span3">
+                            <div class="product-box">
+                                <span class="sale_tag"></span>
+                                <a><img alt="" src="~/Images/cookie01.png"></a><br />
+                                <a class="title">Amish Sugar Cookies</a><br />
+                                <a class="category">Cookie</a>
+                                <p>@Html.ActionLink("Check Now!", "CookiesTutorial1", "Home")</p>
+                            </div>
+                        </li>
+                        <li class="span3">
+                            <div class="product-box">
+                                <a><img alt="" src="~/Images/cookie02.png"></a><br />
+                                <a class="title">Banana Chocolate Chip Cookies</a><br />
+                                <a class="category">Cookie</a>
+                                <p>@Html.ActionLink("Check Now!", "CookiesTutorial2", "Home")</p>
+                            </div>
+                        </li>
+                        <li class="span3">
+                            <div class="product-box">
+                                <span class="sale_tag"></span>
+                                <a><img alt="" src="~/Images/cookie03.png"></a><br />
+                                <a class="title">Big Soft Ginger Cookies</a><br />
+                                <a class="category">Cookie</a>
+                                <p>@Html.ActionLink("Check Now!", "CookiesTutorial3", "Home")</p>
+                            </div>
+                        </li>
+                        <li class="span3">
+                            <div class="product-box">
+                                <span class="sale_tag"></span>
+                                <a><img alt="" src="~/Images/cookie04.png"></a><br />
+                                <a class="title">Chippy Peanut Butter Cookies</a><br />
+                                <a class="category">Cookie</a>
+                                <p>@Html.ActionLink("Check Now!", "CookiesTutorial4", "Home")</p>
+                            </div>
+                        </li>
+                        <li class="span3">
+                            <div class="product-box">
+                                <a><img alt="" src="~/Images/cookie05.png"></a><br />
+                                <a class="title">Red Velvet Chocolate Chip Cookies</a><br />
+                                <a class="category">Cookie</a>
+                                <p>@Html.ActionLink("Check Now!", "CookiesTutorial5", "Home")</p>
+                            </div>
+                        </li>
+                        <li class="span3">
+                            <div class="product-box">
+                                <a><img alt="" src="~/Images/cookie06.png"></a><br />
+                                <a class="title">BUTTER COOKIES</a><br />
+                                <a class="category">Cookie</a>
+                                <p>@Html.ActionLink("Check Now!", "CookiesTutorial6", "Home")</p>
+                            </div>
+                        </li>
+                        <li class="span3">
+                            <div class="product-box">
+                                <a><img alt="" src="~/Images/cookie07.png"></a><br />
+                                <a  class="title">Oreo Chunk Cookies</a><br />
+                                <a class="category">Cookie</a>
+                                <p>@Html.ActionLink("Check Now!", "CookiesTutorial7", "Home")</p>
+                            </div>
+                        </li>
+                        <li class="span3">
+                            <div class="product-box">
+                                <a><img alt="" src="~/Images/cookie08.png"></a><br />
+                                <a class="title">Peanut Butter-Chocolate No-Bake Cookies</a><br />
+                                <a class="category">Cookie</a>
+                                <p>@Html.ActionLink("Check Now!", "CookiesTutorial8", "Home")</p>
+                            </div>
+                        </li>
+                        <li class="span3">
+                            <div class="product-box">
+                                <a><img alt="" src="~/Images/cookie09.png"></a><br />
+                                <a class="title">Gingerbread Men Cookies</a><br />
+                                <a class="category">Cookie</a>
+                                <p>@Html.ActionLink("Check Now!", "CookiesTutorial9", "Home")</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="pagination pagination-small pagination-centered">
+                    </div>
+                </div>
+                <div class="span3 col">
+                    <div class="block">
+                        <ul class="nav nav-list">
+                            <li class="nav-header">Sub Categories</li>
+                            <li>@Html.ActionLink("Cakes", "CakesSection", "Home")</li>
+                            <li class="active">@Html.ActionLink("Cookies", "CookiesSection", "Home")</li>
+                            <li>@Html.ActionLink("Cupcakes", "CupcakesSection", "Home")</li>
+                            <li>@Html.ActionLink("Breads", "BreadsSection", "Home")</li>
+                            <li>@Html.ActionLink("Pinoy Delicacies", "PinoyDelicaciesSection", "Home")</li>
+                        </ul>
+                        <br />
+                        <ul class="nav nav-list below">
+                            <li class="nav-header">MANUFACTURES</li>
+                            <li>Adidas</li>
+                            <li>Nike</li>
+                            <li>Dunlop</li>
+                            <li>Yamaha</li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <h4 class="title">
+                            <span class="pull-left"><span class="text">Randomize</span></span>
+                            <span class="pull-right">
+                                <a class="left button" href="#myCarousel" data-slide="prev"></a><a class="right button" href="#myCarousel" data-slide="next"></a>
+                            </span>
+                        </h4>
+                        <div id="myCarousel" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="active item">
+                                    <ul class="thumbnails listing-products">
+                                        <li class="span3">
+                                            <div class="product-box">
+                                                <span class="sale_tag"></span>
+                                                <img alt="" src="~/Images/cookie01.png"><br />
+                                                <a class="title">Fusce id molestie massa</a><br />
+                                                <a class="category">Suspendisse aliquet</a>
+                                                @Html.ActionLink("Cookies", "CookiesSection", "Home")
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <h4 class="title"><strong>Best</strong> Seller</h4>
+                        <ul class="small-product">
+                            <li>
+                                <a title="Praesent tempor sem sodales">
+                                    <img src="~/Images/cookie01.png" alt="Praesent tempor sem sodales">
+                                </a>
+                                <a>Praesent tempor sem</a>
+                            </li>
+                            <li>
+                                <a title="Luctus quam ultrices rutrum">
+                                    <img src="~/Images/cookie01.png" alt="Luctus quam ultrices rutrum">
+                                </a>
+                                <a>Luctus quam ultrices rutrum</a>
+                            </li>
+                            <li>
+                                <a title="Fusce id molestie massa">
+                                    <img src="~/Images/cookie01.png" alt="Fusce id molestie massa">
+                                </a>
+                                <a>Fusce id molestie massa</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="footer-bar">
+            <div class="row">
+                <div class="span3">
+                    <h4>Navigation</h4>
+                    <ul class="nav">
+                        <li>@Html.ActionLink("HomePage", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Cakes", "CakesSection", "Home")</li>
+                        <li>@Html.ActionLink("Cookies", "CookiesSection", "Home")</li>
+                        <li>@Html.ActionLink("Cupcakes", "CupcakesSection", "Home")</li>
+                        <li>@Html.ActionLink("Breads", "BreadsSection", "Home")</li>
+                        <li>@Html.ActionLink("Pinoy Delicacies", "PinoyDelicaciesSection", "Home")</li>
+                    </ul>
+                </div>
+                <div class="span4">
+                </div>
+                <div class="span5">
+                    <p class="logo"><img src="~/themes/images/logo.png" class="site_logo" alt=""></p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. the  Lorem Ipsum has been the industry's standard dummy text ever since the you.</p>
+                    <br />
+                    <span class="social_icons">
+                        <a class="facebook" href="#">Facebook</a>
+                        <a class="twitter" href="#">Twitter</a>
+                        <a class="skype" href="#">Skype</a>
+                        <a class="vimeo" href="#">Vimeo</a>
+                    </span>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="~/themes/js/common.js"></script>
+</body>
+</html>

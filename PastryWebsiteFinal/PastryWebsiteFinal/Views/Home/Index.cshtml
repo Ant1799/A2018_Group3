@@ -1,0 +1,371 @@
+﻿@{
+    Layout = null;
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Pastries Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap-responsive.min.css"/>
+
+    <link rel="stylesheet" href="~/Content/bootstrappage.css"/>
+
+    <!-- global styles -->
+  <link rel="stylesheet" href="~/Content/flexslider.css" />
+    <link rel="stylesheet" href="~/Content/main.css" />
+
+    <!-- scripts -->
+    <script src="~/Scripts/jquery-1.7.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/superfish.js"></script>
+    <script src="~/Scripts/jquery.scrolltotop.js"></script>
+
+
+</head>
+<body>
+    <div id="top-bar" class="container">
+        <p>pa check mga teh salamat :)</p>
+        <div class="row">
+            <div class="span4">
+               <!-- <form method="POST" class="search_form">-->
+                    <label>Categories</label>
+                    <input type="search" list="Categories" class="input-block-level search-query" Placeholder="What do you want?" style="color:black;" onchange="openPage()" value="" id="searchcategory"/>
+                    <datalist id="Categories">
+                        <option>Cakes</option>
+                        <option>Cookies</option>
+                        <option>Bread</option>
+                        <option>Pizza</option>
+                        <option>Donut</option>
+                    </datalist>
+                   <!-- <input type="text" class="input-block-level search-query" Placeholder="eg. T-sirt">-->
+                <!--</form>-->
+            </div>
+            <!--script for search--->
+            <script>
+                function openPage() {
+                    var x = document.getElementById("searchcategory").value;
+
+                    if (x === Cakes) {
+                        window.open("/Home/TutorialDetails.cshtml");
+                    }
+                    if (x === Cookies) {
+                        windows.open(@Html.ActionLink("Cookies", "TutorialDetails", "Home"));
+                    }
+                }
+            </script>
+
+            <!---------------------->
+            <div class="span8">
+                <div class="account pull-right">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper" class="container">
+        <section class="navbar main-menu">
+            <div class="navbar-inner main-menu">
+                <a class="logo pull-left"><img src="~/themes/images/logo.png" class="site_logo" alt=""></a>
+                <nav id="menu" class="pull-right">
+                    <ul>
+                        <li>@Html.ActionLink("HomePage", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Cakes", "CakesSection", "Home")</li>
+                        <li>@Html.ActionLink("Cookies", "CookiesSection", "Home")</li>
+                        <li>@Html.ActionLink("Cupcakes", "CupcakesSection", "Home")</li>
+                        <li>@Html.ActionLink("Breads", "BreadsSection", "Home")</li>
+                        <li>@Html.ActionLink("Pinoy Delicacies", "PinoyDelicaciesSection", "Home")</li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <section class="homepage-slider" id="home-slider">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <img src="~/Images/banner.jpg" alt="" />
+                    </li>
+                    <li>
+                        <img src="~/Images/banner.jpg" alt="" />
+                        <div class="intro">
+                            <h1>Mid season sale</h1>
+                            <p><span>Up to 50% Off</span></p>
+                            <p><span>On selected items online and in stores</span></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="main-content">
+            <div class="row">
+                <div class="span12">
+                    <div class="row">
+                        <div class="span12">
+                            <h4 class="title">
+                                <span class="pull-left"><span class="text"><span class="line">Feature <strong>Products</strong></span></span></span>
+                                @*<span class="pull-right">
+                                    <a class="left button" href="#myCarousel" data-slide="prev"></a><a class="right button" href="#myCarousel" data-slide="next"></a>
+                                </span>*@
+                            </h4>
+                            <div id="myCarousel" class="myCarousel carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="active item">
+                                        <ul class="thumbnails">
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <span class="sale_tag"></span>
+                                                    <p><a><img src="~/Images/bread01.png" alt="" /></a></p>
+                                                    <a class="title">Brioche Bread</a><br />
+                                                    <a class="category">Bread</a>
+                                                    <p >@Html.ActionLink("Click Me!", "BreadsTutorial1", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <span class="sale_tag"></span>
+                                                    <p><a><img src="~/Images/cakes01.png" alt="" /></a></p>
+                                                    <a class="title">The Perfect Chocolate Cake</a><br />
+                                                    <a class="category">Cake</a>
+                                                    <p>@Html.ActionLink("Proceed Here!", "CakesTutorial1", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <p><a><img src="~/Images/cookie01.png" alt="" /></a></p>
+                                                    <a class="title">Amish Sugar Cookies</a><br />
+                                                    <a class="category">Cookie</a>
+                                                    <p>@Html.ActionLink("Check Now!", "CookiesSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <p><a><img src="~/Images/cupcake01.png" alt="" /></a></p>
+                                                    <a class="title">Dark Chocolate Cupcakes with Peanut Butter Frosting</a><br />
+                                                    <a class="category">Cupcake</a>
+                                                    <p>@Html.ActionLink("Check Here!", "CupcakesTutorial1", "Home")</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="item">
+                                        <ul class="thumbnails">
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <p><a><img src="~/Images/cake1.jpg" alt="" /></a></p>
+                                                    <a class="title">Know exactly</a><br />
+                                                    <a class="category">Quis nostrud</a>
+                                                    <p>@Html.ActionLink("Check Now!", "TutorialsSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <p><a><img src="~/Images/cake1.jpg" alt="" /></a></p>
+                                                    <a class="title">Ut wisi enim ad</a><br />
+                                                    <a class="category">Commodo consequat</a>
+                                                    <p>@Html.ActionLink("Click Me!", "TutorialsSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <p><a><img src="~/Images/cake1.jpg" alt="" /></a></p>
+                                                    <a class="title">You think water</a><br />
+                                                    <a class="category">World once</a>
+                                                    <p>@Html.ActionLink("Proceed Here!", "TutorialsSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <p><a><img src="~/Images/cake1.jpg" alt="" /></a></p>
+                                                    <a class="title">Quis nostrud exerci</a><br />
+                                                    <a class="category">Quis nostrud</a>
+                                                    <p>@Html.ActionLink("Check Now!", "TutorialsSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="span12">
+                            <h4 class="title">
+                                <span class="pull-left"><span class="text"><span class="line">Latest <strong>Products</strong></span></span></span>
+                                @*<span class="pull-right">
+                                    <a class="left button" href="#myCarousel-2" data-slide="prev"></a><a class="right button" href="#myCarousel-2" data-slide="next"></a>
+                                </span>*@
+                            </h4>
+                            <div id="myCarousel-2" class="myCarousel carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="active item">
+                                        <ul class="thumbnails">
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <span class="sale_tag"></span>
+                                                    <p><a><img src="~/Images/pinoy01.png" alt="" /></a></p>
+                                                    <a class="title">Leche Flan</a><br />
+                                                    <a class="category">Pinoy Delicacies</a>
+                                                    <p>@Html.ActionLink("Check Now!", "PinoyDelicaciesTutorial1", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <p><a><img src="~/Images/pinoy02.png" alt="" /></a></p>
+                                                    <a class="title">Ube Halayan</a><br />
+                                                    <a class="category">Pinoy Delicacies</a>
+                                                    <p>@Html.ActionLink("Check Now!", "PinoyDelicaciesTutorial2", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <p><a><img src="~/Images/pinoy03.png" alt="" /></a></p>
+                                                    <a class="title">Sapin Sapin</a><br />
+                                                    <a class="category">Pinoy Delicacies</a>
+                                                    <p>@Html.ActionLink("Look Now!", "PinoyDelicaciesTutorial3", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <p><a><img src="~/Images/pinoy04.png" alt="" /></a></p>
+                                                    <a class="title">Maja Blanca</a><br />
+                                                    <a class="category">Pinoy Delicacies</a>
+                                                    <p>@Html.ActionLink("See It!", "PinoyDelicaciesTutorial4", "Home")</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="item">
+                                        <ul class="thumbnails">
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <p><a><img src="~/Images/cake2.jpg" alt="" /></a></p>
+                                                    <a class="title">Know exactly</a><br />
+                                                    <a class="category">Quis nostrud</a>
+                                                    <p>@Html.ActionLink("Click Me!", "TutorialsSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <p><a><img src="~/Images/cake2.jpg" alt="" /></a></p>
+                                                    <a class="title">Ut wisi enim ad</a><br />
+                                                    <a class="category">Commodo consequat</a>
+                                                    <p>@Html.ActionLink("Proceed!", "TutorialsSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <p><a><img src="~/Images/cake2.jpg" alt="" /></a></p>
+                                                    <a class="title">You think water</a><br />
+                                                    <a class="category">World once</a>
+                                                    <p>@Html.ActionLink("Check Now!", "TutorialsSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                            <li class="span3">
+                                                <div class="product-box">
+                                                    <p><a><img src="~/Images/cake2.jpg" alt="" /></a></p>
+                                                    <a class="title">Quis nostrud exerci</a><br />
+                                                    <a class="category">Quis nostrud</a>
+                                                    <p>@Html.ActionLink("Look!", "TutorialsSection", "Home")</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row feature_box">
+                        <div class="span4">
+                            <div class="service">
+                                <div class="responsive">
+                                    <img src="~/Images/cake2.jpg" alt="" />
+                                    <h4>MODERN <strong>DESIGN</strong></h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and printing industry unknown printer.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span4">
+                            <div class="service">
+                                <div class="customize">
+                                    <img src="~/Images/cake2.jpg" alt="" />
+                                    <h4>FREE <strong>SHIPPING</strong></h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and printing industry unknown printer.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span4">
+                            <div class="service">
+                                <div class="support">
+                                    <img src="~/Images/cake2.jpg" alt="" />
+                                    <h4>24/7 LIVE <strong>SUPPORT</strong></h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and printing industry unknown printer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="our_client">
+            <h4 class="title"><span class="text">Manufactures</span></h4>
+            <div class="row">
+                <div class="span2">
+                    <a><img alt="" src="~/themes/images/clients/14.png"></a>
+                </div>
+                <div class="span2">
+                    <a><img alt="" src="~/themes/images/clients/35.png"></a>
+                </div>
+                <div class="span2">
+                    <a><img alt="" src="~/themes/images/clients/1.png"></a>
+                </div>
+                <div class="span2">
+                    <a><img alt="" src="~/themes/images/clients/2.png"></a>
+                </div>
+                <div class="span2">
+                    <a><img alt="" src="~/themes/images/clients/3.png"></a>
+                </div>
+                <div class="span2">
+                    <a><img alt="" src="~/themes/images/clients/4.png"></a>
+                </div>
+            </div>
+        </section>
+        <section id="footer-bar">
+            <div class="row">
+                <div class="span3">
+                    <h4>Navigation</h4>
+                    <ul class="nav">
+                        <li>@Html.ActionLink("HomePage", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Cakes", "CakesSection", "Home")</li>
+                        <li>@Html.ActionLink("Cookies", "CookiesSection", "Home")</li>
+                        <li>@Html.ActionLink("Cupcakes", "CupcakesSection", "Home")</li>
+                        <li>@Html.ActionLink("Breads", "BreadsSection", "Home")</li>
+                        <li>@Html.ActionLink("Pinoy Delicacies", "PinoyDelicaciesSection", "Home")</li>
+                    </ul>
+                </div>
+                <div class="span4">
+
+                </div>
+                <div class="span5">
+                    <p class="logo"><img src="~/Images/logo.jpg" class="site_logo" alt=""></p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. the  Lorem Ipsum has been the industry's standard dummy text ever since the you.</p>
+                    <br />
+                    <span class="social_icons">
+                        <a class="facebook" href="#">Facebook</a>
+                        <a class="twitter" href="#">Twitter</a>
+                        <a class="skype" href="#">Skype</a>
+                        <a class="vimeo" href="#">Vimeo</a>
+                    </span>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="~/themes/js/common.js"></script>
+    <script src="~/themes/js/jquery.flexslider-min.js"></script>
+</body>
+</html>
