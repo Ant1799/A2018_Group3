@@ -30,33 +30,258 @@
     <div id="top-bar" class="container">
         <div class="row">
             <div class="span4">
-                <!-- <form method="POST" class="search_form">-->
-                <label>Categories</label>
-                <input type="search" list="Categories" class="input-block-level search-query" Placeholder="What do you want?" style="color:black;" onchange="openPage()" value="" id="searchcategory" />
-                <datalist id="Categories">
-                    <option>Cakes</option>
-                    <option>Cookies</option>
-                    <option>Bread</option>
-                    <option>Pizza</option>
-                    <option>Donut</option>
-                </datalist>
-                <!-- <input type="text" class="input-block-level search-query" Placeholder="eg. T-sirt">-->
-                <!--</form>-->
+                <form method="POST" class="search_form">
+                    <label>Categories</label>
+                    <input type="search" list="Categories" class="input-block-level search-query" style="color:black;" Placeholder="What do you want?" value="" id="search1" onchange="openPage1()" />
+                    <datalist id="Categories">
+                        <option>Brioche Bread</option>
+                        <option>ciabatta Bread</option>
+                        <option>focaccia Bread</option>
+                        <option>rye Bread</option>
+                        <option>Bagels</option>
+                        <option>damper Bread</option>
+                        <option>english muffins</option>
+                        <option>mango Bread loaf</option>
+                        <option>banana pandan Bread</option>
+
+                        <option>The Perfect Chocolate Cake</option>
+                        <option>Chocolate Craving Cake</option>
+                        <option>oreo earthquake Cake</option>
+                        <option>Easy Carrot Cake</option>
+                        <option>Lemon Sponge Cake</option>
+                        <option>Mille Crepe Cake</option>
+                        <option>Mirror Glaze Cake</option>
+                        <option>Chocolate Cake</option>
+                        <option>Carrot Cake</option>
+
+                        <option>Amish Sugar Cookies</option>
+                        <option>Banana Chocolate Chip Cookies</option>
+                        <option>Big Soft Ginger Cookies</option>
+                        <option>Chippy Peanut Butter Cookies</option>
+                        <option>Red Velvet Chocolate Chip Cookies</option>
+                        <option>Butter Cookies</option>
+                        <option>Oreo Chunk Cookies</option>
+                        <option>Peanut Butter-Chocolate No-Bake Cookies</option>
+                        <option>GingerBread Men Cookies</option>
+
+                        <option>Dark Chocolate Cupcakes with Peanut Butter Frosting</option>
+                        <option>Homemade Funfetti Cupcakes CupCake</option>
+                        <option>Mocha Cupcakes with Espresso Buttercream Frosting</option>
+                        <option>Ultimate Chocolate Cupcakes</option>
+                        <option>Cheese Cupcakes</option>
+                        <option>Cheese Cupcakes</option>
+                        <option>Coconut Macaroons</option>
+                        <option>Moist chocolate Cupcakes with mocha buttercream frosting</option>
+                        <option>Vanilla Cupcakes</option>
+
+                        <option>Leche Flan</option>
+                        <option>Ube Halaya</option>
+                        <option>Sapin Sapin</option>
+                        <option>Maja Blanca</option>
+                        <option>Silvanas</option>
+                        <option>Buko Pie</option>
+                        <option>Biko</option>
+                        <option>Carioca</option>
+                        <option>Ginataang Bilo Bilo</option>
+                    </datalist>
+                </form>
             </div>
             <!--script for search--->
             <script>
-                function openPage() {
-                    var x = document.getElementById("searchcategory").value;
+                function openPage1() {
+                    var x = document.getElementById("search1").value;
+                    //for Breads
+                    if (x === "Brioche Bread") {
+                        window.open('@Url.Action("BreadsTutorial1","Home")');
+                        close();
+                    }
+                    if (x === "ciabatta Bread") {
+                        window.open('@Url.Action("BreadsTutorial2", "Home")');
+                        close();
+                    }
+                    if (x === "focaccia Bread") {
+                        window.open('@Url.Action("BreadsTutorial3", "Home")');
+                        close();
+                    }
+                    if (x === "rye Bread") {
+                        window.open('@Url.Action("BreadsTutorial4", "Home")');
+                        close();
+                    }
+                    if (x === "Bagels") {
+                        window.open('@Url.Action("BreadsTutorial5", "Home")');
+                        close();
+                    }
+                    if (x === "damper Bread") {
+                        window.open('@Url.Action("BreadsTutorial6", "Home")');
+                        close();
+                    }
+                    if (x === "english muffins") {
+                        window.open('@Url.Action("BreadsTutorial7", "Home")');
+                        close();
+                    }
+                    if (x === "mango Bread loaf") {
+                        window.open('@Url.Action("BreadsTutorial8", "Home")');
+                        close();
+                    }
+                    if (x === "banana pandan Bread") {
+                        window.open('@Url.Action("BreadsTutorial9", "Home")');
+                        close();
+                    }
 
-                    if (x === Cakes) {
-                        window.open("/Home/TutorialDetails.cshtml");
+                    //for Cakes
+                    if (x === "The Perfect Chocolate Cake") {
+                        window.open('@Url.Action("CakesTutorial1","Home")');
+                        close();
                     }
-                    if (x === Cookies) {
-                        windows.open(@Html.ActionLink("Cookies", "TutorialDetails", "Home"));
+                    if (x === "Chocolate Craving Cake") {
+                        window.open('@Url.Action("CakesTutorial2", "Home")');
+                        close();
                     }
+                    if (x === "oreo earthquake Cake") {
+                        window.open('@Url.Action("CakesTutoria13", "Home")');
+                        close();
+                    }
+                    if (x === "Easy Carrot Cake") {
+                        window.open('@Url.Action("CakesTutoria14", "Home")');
+                        close();
+                    }
+                    if (x === "Lemon Sponge Cake") {
+                        window.open('@Url.Action("CakesTutorial5", "Home")');
+                        close();
+                    }
+                    if (x === "Mille Crepe Cake") {
+                        window.open('@Url.Action("CakesTutoria16", "Home")');
+                        close();
+                    }
+                    if (x === "Mirror Glaze Cake") {
+                        window.open('@Url.Action("CakesTutorial7", "Home")');
+                        close();
+                    }
+                    if (x === "Chocolate Cake") {
+                        window.open('@Url.Action("CakesTutorial8", "Home")');
+                        close();
+                    }
+                    if (x === "Carrot Cake") {
+                        window.open('@Url.Action("CakesTutorial9", "Home")');
+                        close();
+                    }
+
+                    //for Cookies
+                    if (x === "Amish Sugar Cookies") {
+                        window.open('@Url.Action("CookiesTutorial1","Home")');
+                        close();
+                    }
+                    if (x === "Banana Chocolate Chip Cookies") {
+                        window.open('@Url.Action("CookiesTutorial2", "Home")');
+                        close();
+                    }
+                    if (x === "Big Soft Ginger Cookies") {
+                        window.open('@Url.Action("CookiesTutorial3", "Home")');
+                        close();
+                    }
+                    if (x === "Chippy Peanut Butter Cookies") {
+                        window.open('@Url.Action("CookiesTutorial4", "Home")');
+                        close();
+                    }
+                    if (x === "Red Velvet Chocolate Chip Cookies") {
+                        window.open('@Url.Action("CookiesTutorial5", "Home")');
+                        close();
+                    }
+                    if (x === "Butter Cookies") {
+                        window.open('@Url.Action("CookiesTutorial6", "Home")');
+                        close();
+                    }
+                    if (x === "Oreo Chunk Cookies") {
+                        window.open('@Url.Action("CookiesTutorial7", "Home")');
+                        close();
+                    }
+                    if (x === "Peanut Butter-Chocolate No-Bake Cookies") {
+                        window.open('@Url.Action("CookiesTutorial8", "Home")');
+                        close();
+                    }
+                    if (x === "GingerBread Men Cookies") {
+                        window.open('@Url.Action("CookiesTutorial9", "Home")');
+                        close();
+                    }
+
+                    //for Cupcakes
+                    if (x === "Dark Chocolate Cupcakes with Peanut Butter Frosting") {
+                        window.open('@Url.Action("CupcakesTutorial1","Home")');
+                        close();
+                    }
+                    if (x === "Homemade Funfetti Cupcakes CupCake") {
+                        window.open('@Url.Action("CupcakesTutorial2", "Home")');
+                        close();
+                    }
+                    if (x === "Mocha Cupcakes with Espresso Buttercream Frosting") {
+                        window.open('@Url.Action("CupcakesTutorial3", "Home")');
+                        close();
+                    }
+                    if (x === "Ultimate Chocolate Cupcakes") {
+                        window.open('@Url.Action("CupcakesTutorial4", "Home")');
+                        close();
+                    }
+                    if (x === "Cheese Cupcakes") {
+                        window.open('@Url.Action("CupcakesTutorial5", "Home")');
+                        close();
+                    }
+                    if (x === "Cheese Cupcakes") {
+                        window.open('@Url.Action("CupcakesTutorial6", "Home")');
+                        close();
+                    }
+                    if (x === "Coconut Macaroons") {
+                        window.open('@Url.Action("CupcakesTutorial7", "Home")');
+                        close();
+                    }
+                    if (x === "Moist chocolate Cupcakes with mocha buttercream frosting") {
+                        window.open('@Url.Action("CupcakesTutorial8", "Home")');
+                        close();
+                    }
+                    if (x === "Vanilla Cupcakes") {
+                        window.open('@Url.Action("CupcakesTutorial9", "Home")');
+                        close();
+                    }
+
+                    //for pinoy delicacies
+                    if (x === "Leche Flan") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial1","Home")');
+                        close();
+                    }
+                    if (x === "Ube Halaya") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial2", "Home")');
+                        close();
+                    }
+                    if (x === "Sapin Sapin") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial3", "Home")');
+                        close();
+                    }
+                    if (x === "Maja Blanca") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial4", "Home")');
+                        close();
+                    }
+                    if (x === "Silvanas") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial5", "Home")');
+                        close();
+                    }
+                    if (x === "Buko Pie") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial6", "Home")');
+                        close();
+                    }
+                    if (x === "Biko") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial7", "Home")');
+                        close();
+                    }
+                    if (x === "Carioca") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial8", "Home")');
+                        close();
+                    }
+                    if (x === "Ginataang Bilo Bilo") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial9", "Home")');
+                        close();
+                    }
+
                 }
             </script>
-
             <!---------------------->
             <div class="span8">
                 <div class="account pull-right">
@@ -94,16 +319,16 @@
                             <a class="thumbnail" data-fancybox-group="group1" title="Description 1"><iframe width="365" height="315" src="https://www.youtube.com/embed/uXiBW77HE8g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
                             <ul class="thumbnails small">
                                 <li class="span1">
-                                    <a class="thumbnail" data-fancybox-group="group1" title="Description 2"><img src="~/Images/cakes03.png" alt=""></a>
+                                    <a class="thumbnail" data-fancybox-group="group1" title="Description 2"><img src="~/Images/Cakes03.png" alt=""></a>
                                 </li>
                                 <li class="span1">
-                                    <a class="thumbnail" data-fancybox-group="group1" title="Description 3"><img src="~/Images/cakes03.png" alt=""></a>
+                                    <a class="thumbnail" data-fancybox-group="group1" title="Description 3"><img src="~/Images/Cakes03.png" alt=""></a>
                                 </li>
                                 <li class="span1">
-                                    <a class="thumbnail" data-fancybox-group="group1" title="Description 4"><img src="~/Images/cakes03.png" alt=""></a>
+                                    <a class="thumbnail" data-fancybox-group="group1" title="Description 4"><img src="~/Images/Cakes03.png" alt=""></a>
                                 </li>
                                 <li class="span1">
-                                    <a class="thumbnail" data-fancybox-group="group1" title="Description 5"><img src="~/Images/cakes03.png" alt=""></a>
+                                    <a class="thumbnail" data-fancybox-group="group1" title="Description 5"><img src="~/Images/Cakes03.png" alt=""></a>
                                 </li>
                             </ul>
                         </div>
@@ -127,27 +352,27 @@
                                 <div id="profile">
                                     <ul>
                                         <p>Ingridients</p>
-                                        <li> 1 box (15.25 ounces) chocolate cake mix, mixed according to package directions</li>
-                                        <li> 24 Oreo cookies</li>
+                                        <li> 1 box (15.25 ounces) Chocolate Cake mix, mixed according to package directions</li>
+                                        <li> 24 Oreo Cookies</li>
                                         <li> 1 package (8 ounces) cream cheese, softened</li>
                                         <li>½ cup (1 stick or 113g) butter, melted</li>
                                         <li>2½ cups (312.5g) confectioners' sugar</li>
-                                        <li>1 teaspoon vanilla extract</li>
+                                        <li>1 teaspoon Vanilla extract</li>
                                         <li>¼ teaspoon kosher salt</li>
                                     </ul>
                                     <ul>
                                         <p>TOPPING</p>
                                         <li>2 cups semi-sweet chocolate chips</li>
-                                        <li>1 cup (10 cookies) Oreos, crumbled chocolate ice cream, optional</li>
+                                        <li>1 cup (10 Cookies) Oreos, crumbled chocolate ice cream, optional</li>
                                     </ul>
                                     <ul>
                                         <p>INSTRUCTIONS</p>
                                         <li>Preheat oven to 350° and grease a 9x13-inch pan with cooking spray.</li>
-                                        <li>Prepare the cake batter according to package directions.</li>
-                                        <li>Layer the bottom of your pan with the Oreo cookies.</li>
-                                        <li>Spread your cake batter over the top. Set aside.</li>
-                                        <li>Meanwhile, in a large bowl, combine the cream cheese, butter, confectioners' sugar, vanilla, and salt.</li>
-                                        <li>Beat with a mixer until combined. Dollop the mixture over the cake and use a knife or skewer to create a marble swirl.</li>
+                                        <li>Prepare the Cake batter according to package directions.</li>
+                                        <li>Layer the bottom of your pan with the Oreo Cookies.</li>
+                                        <li>Spread your Cake batter over the top. Set aside.</li>
+                                        <li>Meanwhile, in a large bowl, combine the cream cheese, butter, confectioners' sugar, Vanilla, and salt.</li>
+                                        <li>Beat with a mixer until combined. Dollop the mixture over the Cake and use a knife or skewer to create a marble swirl.</li>
                                         <li>Sprinkle chocolate chips and crumbled Oreos on top and bake for 55-60 minutes, or until the center is set.</li>
                                         <li>Serve warm with ice cream, if desired.   </li>
                                     </ul>
@@ -166,7 +391,7 @@
                                             <li class="span3">
                                                 <div class="product-box">
                                                     <span class="sale_tag"></span>
-                                                    <a><img alt="" src="~/Images/cakes03.png"></a><br />
+                                                    <a><img alt="" src="~/Images/Cakes03.png"></a><br />
                                                     <a class="title">Wuam ultrices rutrum</a><br />
                                                     <a class="category">Suspendisse aliquet</a>
                                                     <p>@Html.ActionLink("Check Now!", "CakesSection", "Home")</p>
@@ -175,7 +400,7 @@
                                             <li class="span3">
                                                 <div class="product-box">
                                                     <span class="sale_tag"></span>
-                                                    <a><img alt="" src="~/Images/cakes04.png"></a><br />
+                                                    <a><img alt="" src="~/Images/Cakes04.png"></a><br />
                                                     <a class="title">Fusce id molestie massa</a><br />
                                                     <a class="category">Phasellus consequat</a>
                                                     <p>@Html.ActionLink("Check Now!", "CakesSection", "Home")</p>
@@ -183,7 +408,7 @@
                                             </li>
                                             <li class="span3">
                                                 <div class="product-box">
-                                                    <a><img alt="" src="~/Images/cakes03.png"></a><br />
+                                                    <a><img alt="" src="~/Images/Cakes03.png"></a><br />
                                                     <a class="title">Praesent tempor sem</a><br />
                                                     <a class="category">Erat gravida</a>
                                                     <p>@Html.ActionLink("Check Now!", "CakesSection", "Home")</p>
@@ -196,7 +421,7 @@
                                             <li class="span3">
                                                 <div class="product-box">
                                                     <span class="sale_tag"></span>
-                                                    <a><img alt="" src="~/Images/cakes01.png"></a><br />
+                                                    <a><img alt="" src="~/Images/Cakes01.png"></a><br />
                                                     <a class="title">Fusce id molestie massa</a><br />
                                                     <a class="category">Phasellus consequat</a>
                                                     <p>@Html.ActionLink("Check Now!", "CakesSection", "Home")</p>
@@ -204,7 +429,7 @@
                                             </li>
                                             <li class="span3">
                                                 <div class="product-box">
-                                                    <a><img alt="" src="~/Images/cakes03.png"></a><br />
+                                                    <a><img alt="" src="~/Images/Cakes03.png"></a><br />
                                                     <a>Praesent tempor sem</a><br />
                                                     <a class="category">Erat gravida</a>
                                                     <p>@Html.ActionLink("Check Now!", "CakesSection", "Home")</p>
@@ -213,7 +438,7 @@
                                             <li class="span3">
                                                 <div class="product-box">
                                                     <span class="sale_tag"></span>
-                                                    <a><img alt="" src="~/Images/cakes03.png"></a><br />
+                                                    <a><img alt="" src="~/Images/Cakes03.png"></a><br />
                                                     <a class="title">Wuam ultrices rutrum</a><br />
                                                     <a class="category">Suspendisse aliquet</a>
                                                     <p>@Html.ActionLink("Check Now!", "CakesSection", "Home")</p>
@@ -255,7 +480,7 @@
                                         <li class="span3">
                                             <div class="product-box">
                                                 <span class="sale_tag"></span>
-                                                <a><img alt="" src="~/Images/cakes01.png"></a><br />
+                                                <a><img alt="" src="~/Images/Cakes01.png"></a><br />
                                                 <a class="title">Fusce id molestie massa</a><br />
                                                 <a class="category">Suspendisse aliquet</a>
                                                 <p>@Html.ActionLink("Check Now!", "CakesSection", "Home")</p>
@@ -267,7 +492,7 @@
                                     <ul class="thumbnails listing-products">
                                         <li class="span3">
                                             <div class="product-box">
-                                                <a><img alt="" src="~/Images/cakes03.png"></a><br />
+                                                <a><img alt="" src="~/Images/Cakes03.png"></a><br />
                                                 <a class="title">Tempor sem sodales</a><br />
                                                 <a>Urna nec lectus mollis</a>
                                                 <p>@Html.ActionLink("Check Now!", "CakesSection", "Home")</p>
@@ -283,19 +508,19 @@
                         <ul class="small-product">
                             <li>
                                 <a title="Praesent tempor sem sodales">
-                                    <img src="~/Images/cakes04.png" alt="Praesent tempor sem sodales">
+                                    <img src="~/Images/Cakes04.png" alt="Praesent tempor sem sodales">
                                 </a>
                                 <a>Praesent tempor sem</a>
                             </li>
                             <li>
                                 <a title="Luctus quam ultrices rutrum">
-                                    <img src="~/Images/cakes04.png" alt="Luctus quam ultrices rutrum">
+                                    <img src="~/Images/Cakes04.png" alt="Luctus quam ultrices rutrum">
                                 </a>
                                 <a>Luctus quam ultrices rutrum</a>
                             </li>
                             <li>
                                 <a title="Fusce id molestie massa">
-                                    <img src="~/Images/cakes04.png" alt="Fusce id molestie massa">
+                                    <img src="~/Images/Cakes04.png" alt="Fusce id molestie massa">
                                 </a>
                                 <a>Fusce id molestie massa</a>
                             </li>

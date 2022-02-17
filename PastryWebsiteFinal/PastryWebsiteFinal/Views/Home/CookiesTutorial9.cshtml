@@ -30,33 +30,258 @@
     <div id="top-bar" class="container">
         <div class="row">
             <div class="span4">
-                <!-- <form method="POST" class="search_form">-->
-                <label>Categories</label>
-                <input type="search" list="Categories" class="input-block-level search-query" Placeholder="What do you want?" style="color:black;" onchange="openPage()" value="" id="searchcategory" />
-                <datalist id="Categories">
-                    <option>Cakes</option>
-                    <option>Cookies</option>
-                    <option>Bread</option>
-                    <option>Pizza</option>
-                    <option>Donut</option>
-                </datalist>
-                <!-- <input type="text" class="input-block-level search-query" Placeholder="eg. T-sirt">-->
-                <!--</form>-->
+                <form method="POST" class="search_form">
+                    <label>Categories</label>
+                    <input type="search" list="Categories" class="input-block-level search-query" style="color:black;" Placeholder="What do you want?" value="" id="search1" onchange="openPage1()" />
+                    <datalist id="Categories">
+                        <option>Brioche Bread</option>
+                        <option>ciabatta Bread</option>
+                        <option>focaccia Bread</option>
+                        <option>rye Bread</option>
+                        <option>Bagels</option>
+                        <option>damper Bread</option>
+                        <option>english muffins</option>
+                        <option>mango Bread loaf</option>
+                        <option>banana pandan Bread</option>
+
+                        <option>The Perfect Chocolate Cake</option>
+                        <option>Chocolate Craving Cake</option>
+                        <option>oreo earthquake Cake</option>
+                        <option>Easy Carrot Cake</option>
+                        <option>Lemon Sponge Cake</option>
+                        <option>Mille Crepe Cake</option>
+                        <option>Mirror Glaze Cake</option>
+                        <option>Chocolate Cake</option>
+                        <option>Carrot Cake</option>
+
+                        <option>Amish Sugar Cookies</option>
+                        <option>Banana Chocolate Chip Cookies</option>
+                        <option>Big Soft Ginger Cookies</option>
+                        <option>Chippy Peanut Butter Cookies</option>
+                        <option>Red Velvet Chocolate Chip Cookies</option>
+                        <option>Butter Cookies</option>
+                        <option>Oreo Chunk Cookies</option>
+                        <option>Peanut Butter-Chocolate No-Bake Cookies</option>
+                        <option>GingerBread Men Cookies</option>
+
+                        <option>Dark Chocolate Cupcakes with Peanut Butter Frosting</option>
+                        <option>Homemade Funfetti Cupcakes CupCake</option>
+                        <option>Mocha Cupcakes with Espresso Buttercream Frosting</option>
+                        <option>Ultimate Chocolate Cupcakes</option>
+                        <option>Cheese Cupcakes</option>
+                        <option>Cheese Cupcakes</option>
+                        <option>Coconut Macaroons</option>
+                        <option>Moist chocolate Cupcakes with mocha buttercream frosting</option>
+                        <option>Vanilla Cupcakes</option>
+
+                        <option>Leche Flan</option>
+                        <option>Ube Halaya</option>
+                        <option>Sapin Sapin</option>
+                        <option>Maja Blanca</option>
+                        <option>Silvanas</option>
+                        <option>Buko Pie</option>
+                        <option>Biko</option>
+                        <option>Carioca</option>
+                        <option>Ginataang Bilo Bilo</option>
+                    </datalist>
+                </form>
             </div>
             <!--script for search--->
             <script>
-                function openPage() {
-                    var x = document.getElementById("searchcategory").value;
+                function openPage1() {
+                    var x = document.getElementById("search1").value;
+                    //for Breads
+                    if (x === "Brioche Bread") {
+                        window.open('@Url.Action("BreadsTutorial1","Home")');
+                        close();
+                    }
+                    if (x === "ciabatta Bread") {
+                        window.open('@Url.Action("BreadsTutorial2", "Home")');
+                        close();
+                    }
+                    if (x === "focaccia Bread") {
+                        window.open('@Url.Action("BreadsTutorial3", "Home")');
+                        close();
+                    }
+                    if (x === "rye Bread") {
+                        window.open('@Url.Action("BreadsTutorial4", "Home")');
+                        close();
+                    }
+                    if (x === "Bagels") {
+                        window.open('@Url.Action("BreadsTutorial5", "Home")');
+                        close();
+                    }
+                    if (x === "damper Bread") {
+                        window.open('@Url.Action("BreadsTutorial6", "Home")');
+                        close();
+                    }
+                    if (x === "english muffins") {
+                        window.open('@Url.Action("BreadsTutorial7", "Home")');
+                        close();
+                    }
+                    if (x === "mango Bread loaf") {
+                        window.open('@Url.Action("BreadsTutorial8", "Home")');
+                        close();
+                    }
+                    if (x === "banana pandan Bread") {
+                        window.open('@Url.Action("BreadsTutorial9", "Home")');
+                        close();
+                    }
 
-                    if (x === Cakes) {
-                        window.open("/Home/TutorialDetails.cshtml");
+                    //for Cakes
+                    if (x === "The Perfect Chocolate Cake") {
+                        window.open('@Url.Action("CakesTutorial1","Home")');
+                        close();
                     }
-                    if (x === Cookies) {
-                        windows.open(@Html.ActionLink("Cookies", "TutorialDetails", "Home"));
+                    if (x === "Chocolate Craving Cake") {
+                        window.open('@Url.Action("CakesTutorial2", "Home")');
+                        close();
                     }
+                    if (x === "oreo earthquake Cake") {
+                        window.open('@Url.Action("CakesTutoria13", "Home")');
+                        close();
+                    }
+                    if (x === "Easy Carrot Cake") {
+                        window.open('@Url.Action("CakesTutoria14", "Home")');
+                        close();
+                    }
+                    if (x === "Lemon Sponge Cake") {
+                        window.open('@Url.Action("CakesTutorial5", "Home")');
+                        close();
+                    }
+                    if (x === "Mille Crepe Cake") {
+                        window.open('@Url.Action("CakesTutoria16", "Home")');
+                        close();
+                    }
+                    if (x === "Mirror Glaze Cake") {
+                        window.open('@Url.Action("CakesTutorial7", "Home")');
+                        close();
+                    }
+                    if (x === "Chocolate Cake") {
+                        window.open('@Url.Action("CakesTutorial8", "Home")');
+                        close();
+                    }
+                    if (x === "Carrot Cake") {
+                        window.open('@Url.Action("CakesTutorial9", "Home")');
+                        close();
+                    }
+
+                    //for Cookies
+                    if (x === "Amish Sugar Cookies") {
+                        window.open('@Url.Action("CookiesTutorial1","Home")');
+                        close();
+                    }
+                    if (x === "Banana Chocolate Chip Cookies") {
+                        window.open('@Url.Action("CookiesTutorial2", "Home")');
+                        close();
+                    }
+                    if (x === "Big Soft Ginger Cookies") {
+                        window.open('@Url.Action("CookiesTutorial3", "Home")');
+                        close();
+                    }
+                    if (x === "Chippy Peanut Butter Cookies") {
+                        window.open('@Url.Action("CookiesTutorial4", "Home")');
+                        close();
+                    }
+                    if (x === "Red Velvet Chocolate Chip Cookies") {
+                        window.open('@Url.Action("CookiesTutorial5", "Home")');
+                        close();
+                    }
+                    if (x === "Butter Cookies") {
+                        window.open('@Url.Action("CookiesTutorial6", "Home")');
+                        close();
+                    }
+                    if (x === "Oreo Chunk Cookies") {
+                        window.open('@Url.Action("CookiesTutorial7", "Home")');
+                        close();
+                    }
+                    if (x === "Peanut Butter-Chocolate No-Bake Cookies") {
+                        window.open('@Url.Action("CookiesTutorial8", "Home")');
+                        close();
+                    }
+                    if (x === "GingerBread Men Cookies") {
+                        window.open('@Url.Action("CookiesTutorial9", "Home")');
+                        close();
+                    }
+
+                    //for Cupcakes
+                    if (x === "Dark Chocolate Cupcakes with Peanut Butter Frosting") {
+                        window.open('@Url.Action("CupcakesTutorial1","Home")');
+                        close();
+                    }
+                    if (x === "Homemade Funfetti Cupcakes CupCake") {
+                        window.open('@Url.Action("CupcakesTutorial2", "Home")');
+                        close();
+                    }
+                    if (x === "Mocha Cupcakes with Espresso Buttercream Frosting") {
+                        window.open('@Url.Action("CupcakesTutorial3", "Home")');
+                        close();
+                    }
+                    if (x === "Ultimate Chocolate Cupcakes") {
+                        window.open('@Url.Action("CupcakesTutorial4", "Home")');
+                        close();
+                    }
+                    if (x === "Cheese Cupcakes") {
+                        window.open('@Url.Action("CupcakesTutorial5", "Home")');
+                        close();
+                    }
+                    if (x === "Cheese Cupcakes") {
+                        window.open('@Url.Action("CupcakesTutorial6", "Home")');
+                        close();
+                    }
+                    if (x === "Coconut Macaroons") {
+                        window.open('@Url.Action("CupcakesTutorial7", "Home")');
+                        close();
+                    }
+                    if (x === "Moist chocolate Cupcakes with mocha buttercream frosting") {
+                        window.open('@Url.Action("CupcakesTutorial8", "Home")');
+                        close();
+                    }
+                    if (x === "Vanilla Cupcakes") {
+                        window.open('@Url.Action("CupcakesTutorial9", "Home")');
+                        close();
+                    }
+
+                    //for pinoy delicacies
+                    if (x === "Leche Flan") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial1","Home")');
+                        close();
+                    }
+                    if (x === "Ube Halaya") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial2", "Home")');
+                        close();
+                    }
+                    if (x === "Sapin Sapin") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial3", "Home")');
+                        close();
+                    }
+                    if (x === "Maja Blanca") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial4", "Home")');
+                        close();
+                    }
+                    if (x === "Silvanas") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial5", "Home")');
+                        close();
+                    }
+                    if (x === "Buko Pie") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial6", "Home")');
+                        close();
+                    }
+                    if (x === "Biko") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial7", "Home")');
+                        close();
+                    }
+                    if (x === "Carioca") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial8", "Home")');
+                        close();
+                    }
+                    if (x === "Ginataang Bilo Bilo") {
+                        window.open('@Url.Action("PinoyDelicaciesTutorial9", "Home")');
+                        close();
+                    }
+
                 }
             </script>
-
             <!---------------------->
             <div class="span8">
                 <div class="account pull-right">
@@ -109,7 +334,7 @@
                         </div>
                         <div class="span5">
                             <address>
-                                <strong>Cookies:</strong> <span>Gingerbread Men Cookies</span><br><br />
+                                <strong>Cookies:</strong> <span>GingerBread Men Cookies</span><br><br />
                             </address>
                         </div>
                         <div class="span5">
@@ -138,14 +363,14 @@
                                         <li>¾ cup firmly packed brown sugar (150g)</li>
                                         <li>½ cup molasses (118mL)</li>
                                         <li>1 egg room temp</li>
-                                        <li>1 teaspoon vanilla extract (5mL)</li>
+                                        <li>1 teaspoon Vanilla extract (5mL)</li>
                                     </ul>
                                     <ul>
                                         <p>For the Icing:</p>
                                         <li>2 egg whites</li>
                                         <li>1 lb confectioners sugar (454g)</li>
                                         <li>¼ tsp cream of tartar (1g)</li>
-                                        <li>1 tsp vanilla (5mL)</li>
+                                        <li>1 tsp Vanilla (5mL)</li>
                                         <li>2-4 tsp water (10-20mL)</li>
                                     </ul>
                                     <ul>
@@ -153,22 +378,22 @@
                                         <p>For the Cookies:</p>
                                         <li>In a large bowl, combine flour, ginger, cinnamon, cloves, baking soda, nutmeg and salt.</li>
                                         <li>Using a stand mixer fitted with a paddle attachment, cream butter, and brown sugar on medium. Mix until fluffy.</li>
-                                        <li>Add in the molasses, then the egg and vanilla and mix until combined. Scrape the bowl down and mix once more.</li>
+                                        <li>Add in the molasses, then the egg and Vanilla and mix until combined. Scrape the bowl down and mix once more.</li>
                                         <li>Add in flour gradually while mixing on low until a nice dough form until combined.</li>
                                         <li>Divide dough into two portions and roll into disks. Cover with plastic wrap. </li>
                                         <li>Refrigerate for about 4 hours or overnight. This step is important because the dough gets soft quickly and really needs to be thoroughly chilled.</li>
                                         <li>Preheat to 350 degrees F. Roll out chilled dough to about ¼-inch in thickness.</li>
-                                        <li>Cut out gingerbread people/ shapes with a cookie cutter. Carefully transfer to a baking sheet. </li>
-                                        <li>Bake cookies for 10 minutes. Let cool.</li>
+                                        <li>Cut out gingerBread people/ shapes with a cookie cutter. Carefully transfer to a baking sheet. </li>
+                                        <li>Bake Cookies for 10 minutes. Let cool.</li>
                                     </ul>
                                     <ul>
                                         <p>For the Icing and Decoration:</p>
                                         <li>Sift the powdered sugar and cream or tartar into a bowl then whisk together.</li>
                                         <li>Add the egg white in an mix together.</li>
-                                        <li>Once combined, mix in a teaspoon of vanilla and then add water until desired consistency is reached. Transfer to a piping bag fitted with a small round tip or with the tip snipped off.</li>
-                                        <li>Pipe decorations onto the cooled cookies with the royal icing.</li>
+                                        <li>Once combined, mix in a teaspoon of Vanilla and then add water until desired consistency is reached. Transfer to a piping bag fitted with a small round tip or with the tip snipped off.</li>
+                                        <li>Pipe decorations onto the cooled Cookies with the royal icing.</li>
                                         <li>Attach sprinkles and or candies for added visual interest.</li>
-                                        <li>If you made any cookies with bend arms swap out the foil for peppermint balls.</li>
+                                        <li>If you made any Cookies with bend arms swap out the foil for peppermint balls.</li>
                                     </ul>
                                 </div>
                             </div>

@@ -339,12 +339,12 @@ var Microsoft;
                 var value = "";
                 if (name && name.length) {
                     var cookieName = name + "=";
-                    var cookies = Util.document.cookie.split(";");
-                    for (var i = 0; i < cookies.length; i++) {
-                        var cookie = cookies[i];
+                    var Cookies = Util.document.cookie.split(";");
+                    for (var i = 0; i < Cookies.length; i++) {
+                        var cookie = Cookies[i];
                         cookie = Util.trim(cookie);
                         if (cookie && cookie.indexOf(cookieName) === 0) {
-                            value = cookie.substring(cookieName.length, cookies[i].length);
+                            value = cookie.substring(cookieName.length, Cookies[i].length);
                             break;
                         }
                     }
@@ -1461,7 +1461,7 @@ var Microsoft;
                 function User(config) {
                     var cookie = ApplicationInsights.Util.getCookie(User.userCookieName);
                     if (cookie) {
-                        var params = cookie.split(User.cookieSeparator);
+                        var params = cookie.split(User.Cookieseparator);
                         if (params.length > 0) {
                             this.id = params[0];
                         }
@@ -1475,19 +1475,19 @@ var Microsoft;
                         date.setTime(date.getTime() + 31536000000);
                         var newCookie = [this.id, acqStr];
                         var cookieDomain = this.config.cookieDomain ? this.config.cookieDomain() : undefined;
-                        ApplicationInsights.Util.setCookie(User.userCookieName, newCookie.join(User.cookieSeparator) + ';expires=' + date.toUTCString(), cookieDomain);
+                        ApplicationInsights.Util.setCookie(User.userCookieName, newCookie.join(User.Cookieseparator) + ';expires=' + date.toUTCString(), cookieDomain);
                         ApplicationInsights.Util.removeStorage('ai_session');
                     }
                     this.accountId = config.accountId ? config.accountId() : undefined;
                     var authCookie = ApplicationInsights.Util.getCookie(User.authUserCookieName);
                     if (authCookie) {
                         authCookie = decodeURI(authCookie);
-                        var authCookieString = authCookie.split(User.cookieSeparator);
-                        if (authCookieString[0]) {
-                            this.authenticatedId = authCookieString[0];
+                        var authCookiestring = authCookie.split(User.Cookieseparator);
+                        if (authCookiestring[0]) {
+                            this.authenticatedId = authCookiestring[0];
                         }
-                        if (authCookieString.length > 1 && authCookieString[1]) {
-                            this.accountId = authCookieString[1];
+                        if (authCookiestring.length > 1 && authCookiestring[1]) {
+                            this.accountId = authCookiestring[1];
                         }
                     }
                 }
@@ -1502,7 +1502,7 @@ var Microsoft;
                     var authCookie = this.authenticatedId;
                     if (accountId) {
                         this.accountId = accountId;
-                        authCookie = [this.authenticatedId, this.accountId].join(User.cookieSeparator);
+                        authCookie = [this.authenticatedId, this.accountId].join(User.Cookieseparator);
                     }
                     ApplicationInsights.Util.setCookie(User.authUserCookieName, encodeURI(authCookie), this.config.cookieDomain());
                 };
@@ -1519,7 +1519,7 @@ var Microsoft;
                     }
                     return true;
                 };
-                User.cookieSeparator = '|';
+                User.Cookieseparator = '|';
                 User.userCookieName = 'ai_user';
                 User.authUserCookieName = 'ai_authUser';
                 return User;

@@ -279,7 +279,14 @@ a:focus {
   clear: both;
 }
 
-[class*="span"] {
+[class*="
+
+
+
+
+
+
+"] {
   float: left;
   min-height: 1px;
   margin-left: 20px;

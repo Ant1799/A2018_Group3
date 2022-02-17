@@ -75,7 +75,7 @@
 			this.toggleClass(sf.c.shadowClass+'-off');
 		};
 	sf.c = {
-		bcClass     : 'sf-breadcrumb',
+		bcClass     : 'sf-Breadcrumb',
 		menuClass   : 'sf-js-enabled',
 		anchorClass : 'sf-with-ul',
 		arrowClass  : 'sf-sub-indicator',
