@@ -1,4 +1,10 @@
-﻿using System;
+﻿using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using PastryWebsiteFinal.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,11 +14,87 @@ namespace PastryWebsiteFinal.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        IFirebaseConfig config = new FirebaseConfig
         {
+            AuthSecret = "L7JIc2yeN9O9Ju4UjK8l2FCEGjQBTZOCzXHHrBWc",
+            BasePath = "https://recipedatabase-449b8-default-rtdb.firebaseio.com/"
+        };
+        IFirebaseClient client;
+
+
+
+        [HttpGet]
+        public ActionResult AddRecipe()
+        {
+
             return View();
         }
 
+        [HttpPost]
+        public ActionResult AddRecipe(Recipe_Info s)
+        {
+
+            try
+            {
+                AddUserInfo(s);
+                ModelState.AddModelError(string.Empty, "Added Succesfully");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, ex.Message);
+            }
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Index()
+        {
+            client = new FireSharp.FirebaseClient(config);
+            FirebaseResponse response = client.Get("Recipe_Info");
+            dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
+            var list = new List<Recipe_Info>();
+            if (data != null)
+            {
+                foreach (var item in data)
+                {
+                    list.Add(JsonConvert.DeserializeObject<Recipe_Info>(((JProperty)item).Value.ToString()));
+                }
+            }
+            return View(list);
+        }
+
+        [HttpGet]
+        public ActionResult ShowItem(string id)
+        {
+            client = new FireSharp.FirebaseClient(config);
+            FirebaseResponse response = client.Get("Recipe_Info/" + id);
+            dynamic data = JsonConvert.DeserializeObject<Recipe_Info>(response.Body.ToString());
+            return View(data);
+        }
+
+
+        private void AddUserInfo(Recipe_Info info)
+        {
+            info.Image_Location = "C:\\Images\\" + info.Image_Location;
+            client = new FireSharp.FirebaseClient(config);
+            PushResponse response = client.Push("Recipe_Info", info);
+            info.Recipe_ID = response.Result.name;
+            SetResponse setResponse = client.Set("Recipe_Info/"+info.Recipe_ID, info);
+        }
+        //   public ActionResult Send(string command,string roomNumber)
+        //   {
+        //       try
+        //      {
+        //         _serialPortConnector.Send(command + roomNumber);
+
+        //     }
+        //    catch(Exception)
+        //   {
+        //  }
+        //}
+
+
+    
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

@@ -342,6 +342,17 @@
                                 <button class="btn btn-inverse" type="submit">@Html.ActionLink("Back", "BreadsSection", "Home")</button>
                             </form>
                         </div>
+                        <div id="view_count_container">
+                            <p id="view_count_text"></p>
+                        </div>
+                        <script async src="https://api.countapi.xyz/hit/pastrywebsite.somee.com/47f41e82-702b-4bdb-a798-09b290524e8b?callback=websiteVisits"></script>
+                        <h1>Viewer <span id="visits">times.</span></h1>
+                        <script type="text/javascript">
+                            function websiteVisits(response) {
+                                document.querySelector("#visits").textContent = response.value;
+                            }
+                        </script>
+                        <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=get_viewers_ip"></script>
                     </div>
                     <div class="row">
                         <div class="span9">

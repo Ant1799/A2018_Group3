@@ -162,3 +162,15 @@ C:\Users\Administrator\Documents\Visual Studio 2015\Projects\PastryWebsiteFinal\
 C:\Users\Administrator\Documents\Visual Studio 2015\Projects\PastryWebsiteFinal\PastryWebsiteFinal\obj\Release\PastryWebsiteFinal.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Documents\Visual Studio 2015\Projects\PastryWebsiteFinal\PastryWebsiteFinal\obj\Release\PastryWebsiteFinal.dll
 C:\Users\Administrator\Documents\Visual Studio 2015\Projects\PastryWebsiteFinal\PastryWebsiteFinal\obj\Release\PastryWebsiteFinal.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\PastryWebsiteFinal\PastryWebsiteFinal\bin\FireSharp.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\PastryWebsiteFinal\PastryWebsiteFinal\bin\Microsoft.Threading.Tasks.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\PastryWebsiteFinal\PastryWebsiteFinal\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\PastryWebsiteFinal\PastryWebsiteFinal\bin\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\PastryWebsiteFinal\PastryWebsiteFinal\bin\System.Net.Http.Extensions.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\PastryWebsiteFinal\PastryWebsiteFinal\bin\System.Net.Http.Primitives.dll
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\PastryWebsiteFinal\PastryWebsiteFinal\bin\Microsoft.Threading.Tasks.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\PastryWebsiteFinal\PastryWebsiteFinal\bin\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\PastryWebsiteFinal\PastryWebsiteFinal\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\PastryWebsiteFinal\PastryWebsiteFinal\bin\System.Net.Http.Extensions.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\PastryWebsiteFinal\PastryWebsiteFinal\bin\System.Net.Http.Primitives.xml
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\PastryWebsiteFinal\PastryWebsiteFinal\obj\Release\PastryWebsiteFinal.csproj.App.config
