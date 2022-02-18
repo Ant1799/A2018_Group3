@@ -94,7 +94,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/17/2022 07:37:08</publishTime>
     </File>
     <File Include="bin/PastryWebsiteFinal.dll">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:13:59</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>02/17/2022 07:37:08</publishTime>
@@ -221,6 +221,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Images/banner.jpg">
       <publishTime>02/17/2022 07:37:08</publishTime>
+    </File>
+    <File Include="Images/banner01.png">
+      <publishTime>02/18/2022 05:12:10</publishTime>
+    </File>
+    <File Include="Images/banners.jpg">
+      <publishTime>02/18/2022 04:54:50</publishTime>
     </File>
     <File Include="Images/bg.png">
       <publishTime>02/17/2022 07:37:08</publishTime>
@@ -718,160 +724,160 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/17/2022 07:37:08</publishTime>
     </File>
     <File Include="Views/Home/BreadsSection.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:04:55</publishTime>
     </File>
     <File Include="Views/Home/BreadsTutorial1.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:18</publishTime>
     </File>
     <File Include="Views/Home/BreadsTutorial2.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:18</publishTime>
     </File>
     <File Include="Views/Home/BreadsTutorial3.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:18</publishTime>
     </File>
     <File Include="Views/Home/BreadsTutorial4.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:18</publishTime>
     </File>
     <File Include="Views/Home/BreadsTutorial5.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:18</publishTime>
     </File>
     <File Include="Views/Home/BreadsTutorial6.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:18</publishTime>
     </File>
     <File Include="Views/Home/BreadsTutorial7.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:18</publishTime>
     </File>
     <File Include="Views/Home/BreadsTutorial8.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:18</publishTime>
     </File>
     <File Include="Views/Home/BreadsTutorial9.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:18</publishTime>
     </File>
     <File Include="Views/Home/CakesSection.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:04:49</publishTime>
     </File>
     <File Include="Views/Home/CakesTutorial1.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:18</publishTime>
     </File>
     <File Include="Views/Home/CakesTutorial2.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:17</publishTime>
     </File>
     <File Include="Views/Home/CakesTutorial3.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:17</publishTime>
     </File>
     <File Include="Views/Home/CakesTutorial4.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:17</publishTime>
     </File>
     <File Include="Views/Home/CakesTutorial5.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:17</publishTime>
     </File>
     <File Include="Views/Home/CakesTutorial6.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:17</publishTime>
     </File>
     <File Include="Views/Home/CakesTutorial7.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:17</publishTime>
     </File>
     <File Include="Views/Home/CakesTutorial8.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:17</publishTime>
     </File>
     <File Include="Views/Home/CakesTutorial9.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:17</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
       <publishTime>02/17/2022 07:37:08</publishTime>
     </File>
     <File Include="Views/Home/CookiesSection.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:04:49</publishTime>
     </File>
     <File Include="Views/Home/CookiesTutorial1.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:17</publishTime>
     </File>
     <File Include="Views/Home/CookiesTutorial2.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:17</publishTime>
     </File>
     <File Include="Views/Home/CookiesTutorial3.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:17</publishTime>
     </File>
     <File Include="Views/Home/CookiesTutorial4.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:17</publishTime>
     </File>
     <File Include="Views/Home/CookiesTutorial5.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:17</publishTime>
     </File>
     <File Include="Views/Home/CookiesTutorial6.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:17</publishTime>
     </File>
     <File Include="Views/Home/CookiesTutorial7.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:17</publishTime>
     </File>
     <File Include="Views/Home/CookiesTutorial8.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:16</publishTime>
     </File>
     <File Include="Views/Home/CookiesTutorial9.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:16</publishTime>
     </File>
     <File Include="Views/Home/CupcakesSection.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:15</publishTime>
     </File>
     <File Include="Views/Home/CupcakesTutorial1.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:16</publishTime>
     </File>
     <File Include="Views/Home/CupcakesTutorial2.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:16</publishTime>
     </File>
     <File Include="Views/Home/CupcakesTutorial3.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:16</publishTime>
     </File>
     <File Include="Views/Home/CupcakesTutorial4.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:16</publishTime>
     </File>
     <File Include="Views/Home/CupcakesTutorial5.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:16</publishTime>
     </File>
     <File Include="Views/Home/CupcakesTutorial6.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:16</publishTime>
     </File>
     <File Include="Views/Home/CupcakesTutorial7.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:16</publishTime>
     </File>
     <File Include="Views/Home/CupcakesTutorial8.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:16</publishTime>
     </File>
     <File Include="Views/Home/CupcakesTutorial9.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:16</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 05:43:17</publishTime>
     </File>
     <File Include="Views/Home/PinoyDelicaciesSection.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:04:49</publishTime>
     </File>
     <File Include="Views/Home/PinoyDelicaciesTutorial1.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:16</publishTime>
     </File>
     <File Include="Views/Home/PinoyDelicaciesTutorial2.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:16</publishTime>
     </File>
     <File Include="Views/Home/PinoyDelicaciesTutorial3.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:16</publishTime>
     </File>
     <File Include="Views/Home/PinoyDelicaciesTutorial4.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:15</publishTime>
     </File>
     <File Include="Views/Home/PinoyDelicaciesTutorial5.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:15</publishTime>
     </File>
     <File Include="Views/Home/PinoyDelicaciesTutorial6.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:15</publishTime>
     </File>
     <File Include="Views/Home/PinoyDelicaciesTutorial7.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:15</publishTime>
     </File>
     <File Include="Views/Home/PinoyDelicaciesTutorial8.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:12:15</publishTime>
     </File>
     <File Include="Views/Home/PinoyDelicaciesTutorial9.cshtml">
-      <publishTime>02/17/2022 07:37:08</publishTime>
+      <publishTime>02/18/2022 08:13:47</publishTime>
     </File>
     <File Include="Views/Home/TutorialDetails.cshtml">
       <publishTime>02/17/2022 07:37:08</publishTime>

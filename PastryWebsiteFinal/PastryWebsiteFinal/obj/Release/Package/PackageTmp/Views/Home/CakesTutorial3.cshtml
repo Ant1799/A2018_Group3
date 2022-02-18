@@ -294,7 +294,6 @@
     <div id="wrapper" class="container">
         <section class="navbar main-menu">
             <div class="navbar-inner main-menu">
-                <a class="logo pull-left"><img src="~/themes/images/logo.png" class="site_logo" alt=""></a>
                 <nav id="menu" class="pull-right">
                     <ul>
                         <li>@Html.ActionLink("HomePage", "Index", "Home")</li>
@@ -308,7 +307,7 @@
             </div>
         </section>
         <section class="header_text sub">
-            <img class="pageBanner" src="~/themes/images/pageBanner.png" alt="New products">
+            <img class="pageBanner" src="~/Images/banner01.png" alt="New products">
             <h4><span>Tutorial Detail</span></h4>
         </section>
         <section class="main-content">
@@ -402,56 +401,26 @@ To make the icing, beat the butter and sugar together until smooth. Add half the
                                                 <div class="product-box">
                                                     <span class="sale_tag"></span>
                                                     <a><img alt="" src="~/Images/Cakes02.png"></a><br />
-                                                    <a class="title">Wuam ultrices rutrum</a><br />
-                                                    <a class="category">Suspendisse aliquet</a>
-                                                    <p>@Html.ActionLink("Check Now!", "CakesSection", "Home")</p>
+                                                    <a class="title">Chocolate Craving Cake</a><br />
+                                                    <a class="category">Bread</a>
+                                                    <p>@Html.ActionLink("Check Now!", "CakesTutorials2", "Home")</p>
                                                 </div>
                                             </li>
                                             <li class="span3">
                                                 <div class="product-box">
                                                     <span class="sale_tag"></span>
                                                     <a><img alt="" src="~/Images/Cakes02.png"></a><br />
-                                                    <a class="title">Fusce id molestie massa</a><br />
-                                                    <a class="category">Phasellus consequat</a>
-                                                    <p>@Html.ActionLink("Check Now!", "CakesSection", "Home")</p>
+                                                    <a class="title">Chocolate Craving Cake</a><br />
+                                                    <a class="category">Bread</a>
+                                                    <p>@Html.ActionLink("Check Now!", "CakesTutorial2", "Home")</p>
                                                 </div>
                                             </li>
                                             <li class="span3">
                                                 <div class="product-box">
                                                     <a><img alt="" src="~/Images/Cakes02.png"></a><br />
-                                                    <a class="title">Praesent tempor sem</a><br />
-                                                    <a class="category">Erat gravida</a>
-                                                    <p>@Html.ActionLink("Check Now!", "CakesSection", "Home")</p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="item">
-                                        <ul class="thumbnails listing-products">
-                                            <li class="span3">
-                                                <div class="product-box">
-                                                    <span class="sale_tag"></span>
-                                                    <a><img alt="" src="~/Images/Cakes02.png"></a><br />
-                                                    <a class="title">Fusce id molestie massa</a><br />
-                                                    <a class="category">Phasellus consequat</a>
-                                                    <p>@Html.ActionLink("Check Now!", "CakesSection", "Home")</p>
-                                                </div>
-                                            </li>
-                                            <li class="span3">
-                                                <div class="product-box">
-                                                    <a><img alt="" src="~/Images/Cakes02.png"></a><br />
-                                                    <a>Praesent tempor sem</a><br />
-                                                    <a class="category">Erat gravida</a>
-                                                    <p>@Html.ActionLink("Check Now!", "CakesSection", "Home")</p>
-                                                </div>
-                                            </li>
-                                            <li class="span3">
-                                                <div class="product-box">
-                                                    <span class="sale_tag"></span>
-                                                    <a><img alt="" src="~/Images/Cakes02.png"></a><br />
-                                                    <a class="title">Wuam ultrices rutrum</a><br />
-                                                    <a class="category">Suspendisse aliquet</a>
-                                                    <p>@Html.ActionLink("Check Now!", "CakesSection", "Home")</p>
+                                                    <a class="title">Chocolate Craving Cake</a><br />
+                                                    <a class="category">Bread</a>
+                                                    <p>@Html.ActionLink("Check Now!", "CakesTutorial2", "Home")</p>
                                                 </div>
                                             </li>
                                         </ul>
@@ -464,6 +433,7 @@ To make the icing, beat the butter and sugar together until smooth. Add half the
                 <div class="span3 col">
                     <div class="block">
                         <ul class="nav nav-list">
+                            <li class="nav-header">Sub Categories</li>
                             <li class="active">@Html.ActionLink("Cakes", "CakesSection", "Home")</li>
                             <li>@Html.ActionLink("Cookies", "CookiesSection", "Home")</li>
                             <li>@Html.ActionLink("Cupcakes", "CupcakesSection", "Home")</li>
@@ -471,13 +441,7 @@ To make the icing, beat the butter and sugar together until smooth. Add half the
                             <li>@Html.ActionLink("Pinoy Delicacies", "PinoyDelicaciesSection", "Home")</li>
                         </ul>
                         <br />
-                        <ul class="nav nav-list below">
-                            <li class="nav-header">MANUFACTURES</li>
-                            <li>Adidas</li>
-                            <li>Nike</li>
-                            <li>Dunlop</li>
-                            <li>Yamaha</li>
-                        </ul>
+                       
                     </div>
                     <div class="block">
                         <h4 class="title">
@@ -517,22 +481,22 @@ To make the icing, beat the butter and sugar together until smooth. Add half the
                         <h4 class="title"><strong>Best</strong> Seller</h4>
                         <ul class="small-product">
                             <li>
-                                <a title="Praesent tempor sem sodales">
-                                    <img src="~/Images/Cakes02.png" alt="Praesent tempor sem sodales">
+                                <a title="Chocolate Craving Cake">
+                                    <img src="~/Images/cakes02.png" alt="Chocolate Craving Cake">
                                 </a>
-                                <a>Praesent tempor sem</a>
+                                <a>@Html.ActionLink("Chocolate Craving Cake", "CakesSection", "Home")</a>
                             </li>
                             <li>
-                                <a title="Luctus quam ultrices rutrum">
-                                    <img src="~/Images/Cakes02.png" alt="Luctus quam ultrices rutrum">
+                                <a title="Chocolate Craving Cake">
+                                    <img src="~/Images/cakes02.png" alt="Chocolate Craving Cake">
                                 </a>
-                                <a>Luctus quam ultrices rutrum</a>
+                                <a>@Html.ActionLink("Chocolate Craving Cake", "CakesSection", "Home")</a>
                             </li>
                             <li>
-                                <a title="Fusce id molestie massa">
-                                    <img src="~/Images/Cakes02.png" alt="Fusce id molestie massa">
+                                <a title="Chocolate Craving Cake">
+                                    <img src="~/Images/cakes02.png" alt="Chocolate Craving Cake">
                                 </a>
-                                <a>Fusce id molestie massa</a>
+                                <a>@Html.ActionLink("Chocolate Craving Cake", "CakesSection", "Home")</a>
                             </li>
                         </ul>
                     </div>
@@ -555,8 +519,6 @@ To make the icing, beat the butter and sugar together until smooth. Add half the
                 <div class="span4">
                 </div>
                 <div class="span5">
-                    <p class="logo"><img src="~/themes/images/logo.png" class="site_logo" alt=""></p>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. the  Lorem Ipsum has been the industry's standard dummy text ever since the you.</p>
                     <br />
                     <span class="social_icons">
                         <a class="facebook" href="#">Facebook</a>

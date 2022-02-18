@@ -347,17 +347,6 @@
                         <div class="span5">
                             <form class="form-inline">
                                 <button class="btn btn-inverse" type="submit">@Html.ActionLink("Back", "PinoyDelicaciesSection", "Home")</button>
-                                @using (Html.BeginForm())
-                                {
-                                    <div class="input-group col-md-3">
-                                        <input type="text" name="useremail" class="form-control" />
-                                        <div class="input-group-btn">
-                                            <button class="btn btn-success" type="submit">
-                                                <i class="glyphicon glyphicon-send"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                }
                             </form>
                         </div>
                     </div>
@@ -437,6 +426,7 @@
                 <div class="span3 col">
                     <div class="block">
                         <ul class="nav nav-list">
+                            <li class="nav-header">Sub Categories</li>
                             <li>@Html.ActionLink("Cakes", "CakesSection", "Home")</li>
                             <li>@Html.ActionLink("Cookies", "CookiesSection", "Home")</li>
                             <li>@Html.ActionLink("Cupcakes", "CupcakesSection", "Home")</li>
@@ -444,13 +434,7 @@
                             <li class="active">@Html.ActionLink("Pinoy Delicacies", "PinoyDelicaciesSection", "Home")</li>
                         </ul>
                         <br />
-                        <ul class="nav nav-list below">
-                            <li class="nav-header">MANUFACTURES</li>
-                            <li>Adidas</li>
-                            <li>Nike</li>
-                            <li>Dunlop</li>
-                            <li>Yamaha</li>
-                        </ul>
+                       
                     </div>
                     <div class="block">
                         <h4 class="title">
