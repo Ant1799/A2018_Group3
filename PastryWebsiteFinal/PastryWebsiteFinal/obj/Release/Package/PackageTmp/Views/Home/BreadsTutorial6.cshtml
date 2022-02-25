@@ -25,6 +25,8 @@
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/superfish.js"></script>
     <script src="~/Scripts/jquery.scrolltotop.js"></script>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="~/fontawesome/css/all.css" />
 </head>
 <body>
     <div id="top-bar" class="container">
@@ -341,6 +343,13 @@
                             <form class="form-inline">
                                 <button class="btn btn-inverse" type="submit">@Html.ActionLink("Back", "BreadsSection", "Home")</button>
                             </form>
+                            <script async src="https://api.countapi.xyz/hit/pastrywebsite.somee.com/47f41e82-702b-4bdb-a798-09b290524e8b?callback=websiteVisits"></script>
+                            <h1>Viewer <span id="visits">times.</span></h1>
+                            <script type="text/javascript">
+                            function websiteVisits(response) {
+                                document.querySelector("#visits").textContent = response.value;
+                            }
+                            </script>
                         </div>
                     </div>
                     <div class="row">
@@ -475,6 +484,7 @@
                 </div>
             </div>
         </section>
+
         <section id="footer-bar">
             <div class="row">
                 <div class="span3">

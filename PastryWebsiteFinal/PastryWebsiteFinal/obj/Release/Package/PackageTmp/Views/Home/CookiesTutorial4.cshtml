@@ -25,6 +25,8 @@
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/superfish.js"></script>
     <script src="~/Scripts/jquery.scrolltotop.js"></script>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="~/fontawesome/css/all.css" />
 </head>
 <body>
     <div id="top-bar" class="container">
@@ -340,6 +342,13 @@
                             <form class="form-inline">
                                 <button class="btn btn-inverse" type="submit">@Html.ActionLink("Back", "CookiesSection", "Home")</button>
                             </form>
+                            <script async src="https://api.countapi.xyz/hit/pastrywebsite.somee.com/47f41e82-702b-4bdb-a798-09b290524e8b?callback=websiteVisits"></script>
+                            <h1>Viewer <span id="visits">times.</span></h1>
+                            <script type="text/javascript">
+                            function websiteVisits(response) {
+                                document.querySelector("#visits").textContent = response.value;
+                            }
+                            </script>
                         </div>
                     </div>
                     <div class="row">
@@ -474,6 +483,55 @@
                 </div>
             </div>
         </section>
+        <nav class="navbar navbar-default">
+        </nav>
+        <div class="col-md-3"></div>
+        <div class="col-md-6 well">
+            <div class="col-md-6">
+                <div>
+                    <h3>Rating:</h3>
+                    <span id="1" style="font-size:45px; cursor:pointer;" class="fa fa-star" onmouseover="startRating(this)" startRating="starmark(this)"></span>
+                    <span id="2" style="font-size:45px; cursor:pointer;" class="fa fa-star" onmouseover="startRating(this)" startRating="starmark(this)"></span>
+                    <span id="3" style="font-size:45px; cursor:pointer;" class="fa fa-star" onmouseover="startRating(this)" startRating="starmark(this)"></span>
+                    <span id="4" style="font-size:45px; cursor:pointer;" class="fa fa-star" onmouseover="startRating(this)" startRating="starmark(this)"></span>
+                    <span id="5" style="font-size:45px; cursor:pointer;" class="fa fa-star" onmouseover="startRating(this)" startRating="starmark(this)"></span>
+                </div>
+                <br />
+                <div class="form-group">
+                    <h3>Review:</h3>
+                    <textarea id="review" class="form-control" style="resize:none; height:100px;"></textarea>
+                </div>
+                <center><button class="btn btn-success" onclick="result()">SUBMIT</button></center>
+                <div id="result"></div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var count = 0;
+
+            function result() {
+                if (count != 0) {
+                    document.getElementById('result').innerHTML =
+                    "<h4>Rating: <label class='text-primary'>" + count + "</label></h4>"
+                    + "<h4>Review</h4>"
+                    + "<p>" + document.getElementById("review").value + "</p>";
+                } else {
+
+                }
+            }
+
+            function startRating(item) {
+                count = item.id[0];
+                sessionStorage.star = count;
+                for (var i = 0; i < 5; i++) {
+                    if (i < count) {
+                        document.getElementById((i + 1)).style.color = "yellow";
+                    }
+                    else {
+                        document.getElementById((i + 1)).style.color = "black";
+                    }
+                }
+            }
+        </script>
         <section id="footer-bar">
             <div class="row">
                 <div class="span3">
